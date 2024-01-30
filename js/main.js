@@ -23,11 +23,11 @@ $(function(){
 
 
 
-    if(ws > p1 -700 ) {
+    if(ws > p1 -900 ) {
       $(".box:nth-of-type(1),.box:nth-of-type(2),.box:nth-of-type(3)").css("transform","translateY(0px)").css("opacity", "1");
     }
 
-    if(ws > p1-200  ) {
+    if(ws > p1  ) {
       $(".box:nth-of-type(4),.box:nth-of-type(5),.box:nth-of-type(6)").css("transform","translateY(0px)").css("opacity", "1");
     }
   })
@@ -52,13 +52,13 @@ $(function () {
       $("#videobox .container").width("1440px");
     }
 
-    if (ws > p2 + 950) {
+    if (ws > p2 + 850) {
       $("#videobox .video").width("100%");
       $("#videobox p").width("100%");
       $("#videobox .container").width("100%");
     }
 
-    if (ws > p2 + 1250) {
+    if (ws > p2 + 1150) {
       $("#videobox .video").width("90%");
       $("#videobox p").width("90%");
       $("#videobox .container").width("1440px");
@@ -74,17 +74,24 @@ $(function () {
       $('#photoslide .ps2').css("transform", "translateY(0px)").css("opacity", "1");
     }
 
-    if (  ws > p2 + 1700) {
+    if (  ws > p2 + 1650) {
     $('#photoslide .ps3').css("transform", "translateY(0px)").css("opacity", "0.8");
+  
     }
-    if (  ws > p2 + 1850) {
+
+    if (  ws > p2 + 1750) {
+      $('#photoslide .textbox').css("transform", "translateY(0px)").css("opacity", "0.8");
+      
+    }
+
+    if (  ws > p2 + 1820) {
       $('#photoslide .ps4').css("transform", "translateY(0px)").css("opacity", "1");
       
     }
-    if (  ws > p2 + 2000) {
+    if (  ws > p2 + 1900) {
       $('#photoslide .ps5').css("transform", "translateY(0px)").css("opacity", "0.95");
     }
-    if (  ws > p2 + 2150) {
+    if (  ws > p2 + 1950) {
       $('#photoslide .ps6').css("transform", "translateY(0px)").css("opacity", "1");
     }
 

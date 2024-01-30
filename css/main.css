@@ -639,10 +639,31 @@ transition: all 0.3s;
   width: 73%;
   text-align: left;
   padding: 50px 0 0 30px;
-  /* opacity: 0.2; */
   transition: 0.5s;
+  /* white-space: nowrap; */
+  /* display: table; */
+  /* width: max-content; */
+  overflow: hidden;
+  flex: 1;
+  
 }
+.text {width: 100%; height: 100%;}
 
+.text_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  position: absolute;
+  overflow: hidden;
+}
+.text_container:first-child {opacity: 0.2;}
+
+#white {
+  /* width: 600px; */
+  animation: 8s ease-in-out;
+  overflow: hidden;
+}
 
 
 
