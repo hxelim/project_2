@@ -172,6 +172,8 @@ nav>a {
 .box {
   width: 460px;
   height: 480px;
+  opacity: 0;
+  transition: 0.8s;
 }
 
 .box .imgbox {
@@ -192,7 +194,10 @@ nav>a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+  position: relative;
 }
+
 
 
 
@@ -228,7 +233,7 @@ nav>a {
 .bg2023 {
   font-size: 45rem;
   color: var(--maincolor);
-  transition: all 5s;
+  transition: all 1.5s;
 }
 
 .bg2023:nth-of-type(1) {
@@ -261,19 +266,18 @@ nav>a {
   top: 0%;
   left: 0%;
   transform: translateY(-100px);
-  transition: all 5s;
 }
 
 .back2023 .back_big:first-of-type {
   transform: translate(-50px, -80px);
-  transition: all 3s;
+  transition: all 2s;
   margin: 0 30px;
 }
 
 .back2023 .back_big:last-of-type {
   transform: translate(50px, 80px);
   margin: 0 30px;
-  transition: all 3s;
+  transition: all 2s;
 
 }
 
@@ -292,6 +296,9 @@ nav>a {
 #videobox {
   width: 100%;
   height: 700px;
+  /* transform: translate(0px, 100px ); */
+  transition: all 1s;
+  
 }
 
 #videobox .container {
@@ -299,11 +306,12 @@ nav>a {
   flex-wrap: wrap;
   justify-content: center;
   transition: all 1s;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #videobox .video {
-  width: 1296px;
+  /* width: 1296px; */
+  width: 90%;
   height: 650px;
   background-color: lightgray;
   position: relative;
@@ -316,6 +324,7 @@ transition: all 0.3s;
   object-fit: cover;
   transition: all 0.3s;
 }
+
 
 .video button {
   width: 100px;
@@ -352,9 +361,11 @@ transition: all 0.3s;
   position: relative;
   text-align: center;
   overflow: hidden;
-  transition: all 3s;
+
 
 }
+
+
 
 .imgboxBG {
   width: 100%;
@@ -365,26 +376,26 @@ transition: all 0.3s;
 #photoslide .imgbox {
   width: 325px;
   height: 216px;
-  background-color: gold;
   position: absolute;
+  
+
 }
 
 #photoslide .imgbox:nth-of-type(1) {
   top: 10%;
-  left: 0%;
-  transform: translate(-10%, 0);
+  left: -2%;
 }
 
 #photoslide .imgbox:nth-of-type(2) {
   top: 3%;
   left: 18%;
-  opacity: 0.95;
+  /* opacity: 0.95; */
+
 }
 
 #photoslide .imgbox:nth-of-type(3) {
   top: 17%;
   left: 40%;
-  transform: scale(1.05);
 }
 
 #photoslide .imgbox:nth-of-type(4) {
@@ -400,8 +411,7 @@ transition: all 0.3s;
 #photoslide .imgbox:nth-of-type(6) {
   bottom: 5%;
   left: 25%;
-  transform: scale(0.8);
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 #photoslide .imgbox:nth-of-type(7) {
@@ -412,39 +422,45 @@ transition: all 0.3s;
 #photoslide .imgbox:nth-of-type(8) {
   top: 5%;
   right: 20%;
-  transform: scale(0.8);
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 #photoslide .imgbox:nth-of-type(9) {
   top: 32%;
   right: 28%;
-  transform: scale(0.9);
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 #photoslide .imgbox:nth-of-type(10) {
   bottom: 8%;
   right: 9%;
-  transform: scale(1.2);
 }
 
 #photoslide .imgbox:nth-of-type(11) {
   bottom: 11%;
   right: 33%;
-  transform: 0.95;
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 #photoslide .imgbox:nth-of-type(12) {
   top: 0%;
   right: 0%;
-  transform: translate(30%, 0);
 }
+
+#photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6  {
+  transition: all 2s;
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+
 
 #photoslide .textbox {
   z-index: 5;
   position: absolute;
+  transition: all 2s;
+  transform: translateY(150px);
+  opacity: 0;
 }
 
 #photoslide .textbox h3 {
@@ -554,7 +570,10 @@ transition: all 0.3s;
 }
 
 .active {
-  color: aqua;
+  color: var(--maincolor);
+  transform: translate(100px);
+  transition: 0.3s;
+  border-bottom: 1px solid var(--maincolor);
 }
 
 
@@ -620,7 +639,12 @@ transition: all 0.3s;
   width: 73%;
   text-align: left;
   padding: 50px 0 0 30px;
+  /* opacity: 0.2; */
+  transition: 0.5s;
 }
+
+
+
 
 #stageforworld .img {
   width: 33%;
