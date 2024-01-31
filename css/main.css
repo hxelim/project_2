@@ -636,7 +636,7 @@ transition: all 0.3s;
 #stageforworld h3 {
   letter-spacing: -2px;
   line-height: 6rem;
-  width: 73%;
+  width: 73vw;
   text-align: left;
   padding: 50px 0 0 30px;
   transition: 0.5s;
@@ -648,10 +648,11 @@ transition: all 0.3s;
   
 }
 .text {width: 100%; height: 100%;}
+.skew { transform: skewX(-10deg);}
 
 .text_container {
   height: 100vh;
-  width: 100vw;
+  width: 73vw;
   display: flex;
 
   position: absolute;
@@ -660,9 +661,10 @@ transition: all 0.3s;
 .text_container:first-child {opacity: 0.2;}
 
 #white {
-  /* width: 600px; */
+  width: 600px;
   animation: 8s ease-in-out;
   overflow: hidden;
+  transform: skewX(10deg);
 }
 
 

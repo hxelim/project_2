@@ -27,7 +27,7 @@ $(function(){
       $(".box:nth-of-type(1),.box:nth-of-type(2),.box:nth-of-type(3)").css("transform","translateY(0px)").css("opacity", "1");
     }
 
-    if(ws > p1  ) {
+    if(ws > p1 -300 ) {
       $(".box:nth-of-type(4),.box:nth-of-type(5),.box:nth-of-type(6)").css("transform","translateY(0px)").css("opacity", "1");
     }
   })
