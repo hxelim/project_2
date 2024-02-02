@@ -1,3 +1,23 @@
+// 호버하면 navigation
+$(function(){
+
+  $('nav li, .Mnav').mouseover(function(){
+    $('.emptybox').stop().slideDown();
+    $('.sub_nav').stop().slideDown();
+  }).mouseout(function(){
+    $('.emptybox').stop().slideUp();
+    $('.sub_nav').stop().slideUp();
+  })
+
+  $('.sub_nav li a').mouseover(function(){
+    $(this).addClass('select')
+  }).mouseout(function(){
+    $(this).removeClass('select')
+  })
+});
+
+
+
 // 슬라이드 사진 
 function slide() {
   $('.sliderimg').stop().animate({ marginLeft: -1110 }, 900, function () {
@@ -14,21 +34,19 @@ setInterval(slide, 5000);
 
 
 // 스크롤 내리면 article 아래에서 등장
-$(function(){
-  $(window).scroll(function(){
-    var ws=$(this).scrollTop();
-    var p1=$(".part1").offset().top;
+$(function () {
+  $(window).scroll(function () {
+    var ws = $(this).scrollTop();
+    var p1 = $(".part1").offset().top;
 
-    $(".part1 .box").css("transform","translateY(100px)").css("opacity", "0");
+    $(".part1 .box").css("transform", "translateY(100px)").css("opacity", "0");
 
-
-
-    if(ws > p1 -900 ) {
-      $(".box:nth-of-type(1),.box:nth-of-type(2),.box:nth-of-type(3)").css("transform","translateY(0px)").css("opacity", "1");
+    if (ws > p1 - 900) {
+      $(".part1 .box:lt(3)").css("transform", "translateY(0px)").css("opacity", "1");
     }
 
-    if(ws > p1 -300 ) {
-      $(".box:nth-of-type(4),.box:nth-of-type(5),.box:nth-of-type(6)").css("transform","translateY(0px)").css("opacity", "1");
+    if (ws > p1 - 300) {
+      $('.part1 .box').slice(3).css("transform", "translateY(0px)").css("opacity", "1");
     }
   })
 });
@@ -56,6 +74,10 @@ $(function () {
       $("#videobox .video").width("100%");
       $("#videobox p").width("100%");
       $("#videobox .container").width("100%");
+
+      // $("#videobox .video").width("100%");
+      // $("#videobox p").width("100%");
+      // $("#videobox .container").width(ws-1380);
     }
 
     if (ws > p2 + 1150) {
@@ -65,43 +87,58 @@ $(function () {
     }
 
 
-    if (  ws > p2 + 1400) {
+    if (ws > p2 + 1400) {
 
       $('#photoslide .ps1').css("transform", "translateY(0px)").css("opacity", "1");
     }
-     
-    if (  ws > p2 + 1550) {
+
+    if (ws > p2 + 1550) {
       $('#photoslide .ps2').css("transform", "translateY(0px)").css("opacity", "1");
     }
 
-    if (  ws > p2 + 1650) {
-    $('#photoslide .ps3').css("transform", "translateY(0px)").css("opacity", "0.8");
-  
+    if (ws > p2 + 1650) {
+      $('#photoslide .ps3').css("transform", "translateY(0px)").css("opacity", "0.8");
+
     }
 
-    if (  ws > p2 + 1750) {
+    if (ws > p2 + 1750) {
       $('#photoslide .textbox').css("transform", "translateY(0px)").css("opacity", "0.8");
-      
+
     }
 
-    if (  ws > p2 + 1820) {
+    if (ws > p2 + 1820) {
       $('#photoslide .ps4').css("transform", "translateY(0px)").css("opacity", "1");
-      
+
     }
-    if (  ws > p2 + 1900) {
+    if (ws > p2 + 1900) {
       $('#photoslide .ps5').css("transform", "translateY(0px)").css("opacity", "0.95");
     }
-    if (  ws > p2 + 1950) {
+    if (ws > p2 + 1950) {
       $('#photoslide .ps6').css("transform", "translateY(0px)").css("opacity", "1");
     }
 
+  });
+});
 
 
+// 스크롤 내려가면 part3 나타나는 효과
+$(function () {
+  $(window).scroll(function () {
+    var ws = $(this).scrollTop();
+    var p3 = $(".part3").offset().top;
+
+    if (ws> p3-700) {
+      $('#french .box').eq(0).animate({top:-100, opacity:1},500);
+      $('#french .box').eq(1).delay(300).animate({top:-100, opacity:1},500);
+      $('#french .box').eq(2).delay(500).animate({top:-100, opacity:1},500);
+      $('#french .box').eq(3).delay(800).animate({top:-100, opacity:1},500);
+    }
 
 
+    if (ws > p3 ) {
+      $('#black').width((ws-7000)/11+'%')
+    }
 
-
-    
   });
 });
 
@@ -117,7 +154,7 @@ $(function () {
     $('.rightbox img').hide();
     $('.rightbox img').eq(idx).stop().fadeIn('fast');
 
-  })
+  });
 });
 
 
@@ -131,21 +168,3 @@ $(function () {
   })
 });
 
-
-// // 스크롤 내리면 순차적으로 텍스트 짙어짐
-//   $(document).ready(function () {
-//     // 스크롤 이벤트 감지
-//     $(window).on('scroll', function () {
-//         // 각 텍스트 엘리먼트에 대해 실행
-//         $('#stageforworld h3').each(function () {
-//             // 각 단어에 대해 실행
-//             $(this).find('span').each(function (index) {
-//                 var word = $(this);
-//                 // 화면에 보일 때 순차적으로 투명도를 1로 설정하여 나타나도록 함
-//                 setTimeout(function () {
-//                     word.css('opacity', 1);
-//                 }, index * 300); // 500ms 간격으로 나타나도록 설정 (원하는 시간으로 수정 가능)
-//             });
-//         });
-//     });
-//   });
