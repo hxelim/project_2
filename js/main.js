@@ -1,6 +1,15 @@
-// 호버하면 navigation
 $(function(){
+  function updateSlideTextHeight(){
+  var 자식높이 = $('.boxSize').height();
+  $('.slidetext').css('height', 자식높이)
+}
+    updateSlideTextHeight();
 
+  $(window).resize(function(){
+    updateSlideTextHeight();
+  });
+
+// 호버하면 navigation
   $('nav li, .Mnav').mouseover(function(){
     $('.emptybox').stop().slideDown();
     $('.sub_nav').stop().slideDown();
@@ -14,7 +23,6 @@ $(function(){
   }).mouseout(function(){
     $(this).removeClass('select')
   })
-});
 
 
 
@@ -34,7 +42,6 @@ setInterval(slide, 5000);
 
 
 // 스크롤 내리면 article 아래에서 등장
-$(function () {
   $(window).scroll(function () {
     var ws = $(this).scrollTop();
     var p1 = $(".part1").offset().top;
@@ -49,22 +56,28 @@ $(function () {
       $('.part1 .box').slice(3).css("transform", "translateY(0px)").css("opacity", "1");
     }
   })
-});
 
 
 
 
 
 // 스크롤 내려가면 part2 나타나는 효과
-$(function () {
   $(window).scroll(function () {
     var ws = $(this).scrollTop();
     var p2 = $(".part2").offset().top;
+    var windowWidth=$(window).width();
 
     if (p2 < ws) {
       $('.bg2023').css("transform", "translateY(-70px)");
       $('.back_big').css("transform", "translate(0px)");
       $('.back_small').css("transform", "translateY(10px)");
+    }
+
+
+    if (windowWidth >=1457){
+ 
+      if (p2 < ws) {
+
       $("#videobox .video").width("90%");
       $("#videobox p").width("90%");
       $("#videobox .container").width("1440px");
@@ -83,8 +96,12 @@ $(function () {
       $("#videobox p").width("90%");
       $("#videobox .container").width("1440px");
     }
-
-
+  } else {
+    $("#videobox .video").width("100%");
+    $("#videobox p").width("100%");
+    $("#videobox .container").width("100%");
+  }
+// 포토슬라이드
     if (ws > p2 + 1400) {
 
       $('#photoslide .ps1').css("transform", "translateY(0px)").css("opacity", "1");
@@ -116,11 +133,9 @@ $(function () {
     }
 
   });
-});
 
 
 // 스크롤 내려가면 part3 나타나는 효과
-$(function () {
   $(window).scroll(function () {
     var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
@@ -132,18 +147,17 @@ $(function () {
       $('#french .box').eq(3).delay(800).animate({top:-100, opacity:1},500);
     }
 
-
     if (ws > p3 ) {
       $('#black').width((ws-7000)/11+'%')
 
     }
 
+
+    
   });
-});
 
 
 // 수상내역 마우스 호버시 포스터 바뀜
-$(function () {
   $('.awardslist').mouseenter(function () {
     let idx = $(this).index()
 
@@ -154,16 +168,17 @@ $(function () {
     $('.rightbox img').eq(idx).stop().fadeIn('fast');
 
   });
-});
 
 
 // 포토슬라이드 버튼 호버하면 이미지 어둡게
-$(function () {
   $('#photoslide button').mouseenter(function () {
     $('.imgboxBG').fadeTo('50ms', 0.3);
   })
   $('#photoslide button').mouseout(function () {
     $('.imgboxBG').fadeTo("50ms", 1);
   })
-});
 
+
+
+
+});
