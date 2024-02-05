@@ -75,9 +75,7 @@ $(function () {
       $("#videobox p").width("100%");
       $("#videobox .container").width("100%");
 
-      // $("#videobox .video").width("100%");
-      // $("#videobox p").width("100%");
-      // $("#videobox .container").width(ws-1380);
+
     }
 
     if (ws > p2 + 1150) {
@@ -137,6 +135,7 @@ $(function () {
 
     if (ws > p3 ) {
       $('#black').width((ws-7000)/11+'%')
+
     }
 
   });
