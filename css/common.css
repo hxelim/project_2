@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@600&family=Noto+Serif+Bengali:wght@800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+  
+  /* 공통 */
+  body {
+    background-color: #F1EEE9;
+  }
+
+  :root {
+    --maincolor: #C6A26E;
+    --white: #fff;
+    --black: #222;
+  }
+
+  h2 {    font-size: 8.5rem;  }
+  h3 {    font-size: 5rem;  }
+  h4 {    font-size: 4rem;  }
+  h5 {    font-size: 3rem;  }
+  h6 {    font-size: 2.5rem;  }
+  p {    font-size: 1.2rem;  }
+
+
+
+  /* 헤더 */
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: relative;
+
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .Mnav>li {
+    display: block;
+    float: left;
+    width: 20%;
+    line-height: 3rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .Mnav>li>a {
+    font-weight: bold;
+  }
+
+  nav>a {
+    width: 20%;
+    height: 65%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+
+  .headericon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+  }
+
+  .sub_nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+    height: 280px;
+  }
+
+  .sub_nav>li>a {
+    width: 100%;
+    display: block;
+  }
+
+  .emptybox {
+    width: 100%;
+    height: 19.4444vw;
+    display: none;
+    padding: 0;
+  }
+
+  .select {
+    color: var(--white);
+    background-color: rgb(198, 162, 110, 0.7);
+
+  }
+
+   /* 푸터 */
+  /* left box */
+  footer {
+    width: 100%;
+    height: 580px;
+    position: relative;
+  }
+
+  footer h5 {
+    font-weight: 300;
+  }
+
+  footer span {
+    font-size: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .footer_L {
+    background-image: url(../img/common/footerBG.svg);
+    background-size: cover;
+    width: 50%;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--white);
+    opacity: 0.95;
+    padding: 50px 20px
+  }
+
+  .footer_L .textbox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact {
+    text-align: right;
+    width: 100%;
+  }
+
+  .contact p {
+    line-height: 1.6rem;
+    ;
+  }
+
+  /* right box */
+  .footer_R {
+    width: 50%;
+    height: 80%;
+    background-color: var(--maincolor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+  }
+
+  .subscribe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .subscribe p:first-child {
+    font-size: 1.8rem;
+  }
+
+  .subscribe .iconbox {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .iconbox .icon {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--maincolor);
+    margin: 0 5px;
+    font-size: 1.5rem;
+  }
+
+  .subscribe input {
+    height: 40px;
+    border: none;
+    width: 430px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+
+  input::placeholder {
+    color: var(--maincolor);
+    display: inline;
+  }
+
+
+  .sitemap {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px 0 0;
+    align-items: flex-end;
+  }
+
+  .sitemap .textbox p {
+    margin-top: 15px;
+  }
+
