@@ -166,7 +166,7 @@
 
     .emptybox {
       width: 100%;
-      height: 280px;
+      height: 28vw;
       display: none;
       padding: 0;
     }
@@ -460,7 +460,7 @@
     /* photoSlide */
     #photoslide {
       width: 100%;
-      height: 900px;
+      height: 100vh;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -474,80 +474,34 @@
 
 
 
+
     .imgboxBG {
       width: 100%;
-      height: 900px;
-      position: relative
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .imgboxBG:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #222;
+      opacity: 0.2;
     }
 
     #photoslide .imgbox {
-      width: 325px;
-      height: 216px;
-      position: absolute;
-
-
+      width: 33.333%;
+      height: 25%;
+      /* position: absolute; */
     }
 
-    #photoslide .imgbox:nth-of-type(1) {
-      top: 10%;
-      left: -2%;
-    }
-
-    #photoslide .imgbox:nth-of-type(2) {
-      top: 3%;
-      left: 18%;
-
-    }
-
-    #photoslide .imgbox:nth-of-type(3) {
-      top: 17%;
-      left: 40%;
-    }
-
-    #photoslide .imgbox:nth-of-type(4) {
-      top: 42%;
-      left: 15%;
-    }
-
-    #photoslide .imgbox:nth-of-type(5) {
-      bottom: 0%;
-      left: 2%;
-    }
-
-    #photoslide .imgbox:nth-of-type(6) {
-      bottom: 5%;
-      left: 25%;
-    }
-
-    #photoslide .imgbox:nth-of-type(7) {
-      top: 35%;
-      right: 4%;
-    }
-
-    #photoslide .imgbox:nth-of-type(8) {
-      top: 5%;
-      right: 20%;
-    }
-
-    #photoslide .imgbox:nth-of-type(9) {
-      top: 32%;
-      right: 28%;
-    }
-
-    #photoslide .imgbox:nth-of-type(10) {
-      bottom: 8%;
-      right: 9%;
-    }
-
-    #photoslide .imgbox:nth-of-type(11) {
-      bottom: 11%;
-      right: 33%;
-    }
-
-    #photoslide .imgbox:nth-of-type(12) {
-      top: 0%;
-      right: 0%;
-    }
+    #photoslide .imgbox img {transform: scale(1) !important;}
 
     #photoslide .ps1,
     .ps2,
@@ -961,7 +915,20 @@
     }
   }
 
-@media(min-width: 1440px) {
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@media(min-width: 1457px) {
     html {
       font-size: 15px;
     }
@@ -1046,7 +1013,7 @@
 
     .emptybox {
       width: 100%;
-      height: 280px;
+      height: 19.4444vw;
       display: none;
       padding: 0;
     }
@@ -1355,6 +1322,18 @@
       width: 100%;
       height: 900px;
       position: relative
+    }
+
+
+    .imgboxBG:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #222;
+      opacity: 0.2;
     }
 
     #photoslide .imgbox {
