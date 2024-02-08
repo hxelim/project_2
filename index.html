@@ -11,6 +11,7 @@
   <script src="https://kit.fontawesome.com/02b18b2c57.js" crossorigin="anonymous"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/main_slide.js"></script>
 
 
 </head>
@@ -86,42 +87,25 @@
   </header>
 
   <!-- 슬라이더 -->
-  <div id="slider">
-    <div class="sliderbg"></div>
-    <div class="slidertexthide"></div>
-    <div class="slide">
-      <div class="sliderimg">
-        <div class="img s1">
-          <img src="img/main/slider_1.jpg" alt="">
-        </div>
-        <div class="img s2">
-          <img src="img/main/slider_2.jpg" alt="">
-        </div>
-        <div class="img s3">
-          <img src="img/main/slider_3.jpg" alt="">
-        </div>
-      </div>
-
-      <div class="slidertext">
-        <div class="stext">
-          <h6>
-            Greta Gerwig, Jury President <br> of the 77th Cannes Film Festival
-          </h6>
-          <h6>
-            Submission for films for the 2024 <br> Official Selection is now open!
-          </h6>
+  <div id="slidewrap">
+    <div id="slideBG"></div>
+    <div id="slidecontent">
+      <ul class="slide">
+        <li>
+          <div class="img" style="background-image: url(img/main/slider_1.jpg);"></div>
+          <h6>Greta Gerwig, Jury President <br> of the 77th Cannes Film Festival</h6>
+        </li>
+        <li>
+          <div class="img" style="background-image: url(img/main/slider_2.jpg);"></div>
+          <h6>Submission for films for the 2024 <br> Official Selection is now open!</h6>
+        </li>
+        <li>
+          <div class="img" style="background-image: url(img/main/slider_3.jpg);"></div>
           <h6>The Photographer’s Prize <br> for May 24</h6>
-        </div>
-      </div>
-
+        </li>
+      </ul>
     </div>
-    <!-- <div class="sliderbutton">
-        <button></button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button></button>
-      </div> -->
+    <div id="slideBGsub"></div>
   </div>
 
   <!-- 섹션 1 -->

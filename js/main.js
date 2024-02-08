@@ -69,7 +69,7 @@ $(function () {
 
 // 미디어 쿼리
 if (window.matchMedia("(min-width:1457px)").matches) {
-  // 뷰포트 너비가 1440 픽셀 이상
+  // 뷰포트 너비가 1457 픽셀 이상
   $(function () {
     // 슬라이드 사진 
     function slide() {
@@ -123,7 +123,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
       $("#videobox .container").width("1440px");
     }
 
-    if (ws > p2 + 1100) {
+    if (ws > p2 + 700) {
       $("#videobox .video").width("100%");
       $("#videobox p").width("100%");
       $("#videobox .container").width("100%");
@@ -131,7 +131,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
 
     }
 
-    if (ws > p2 + 1450) {
+    if (ws > p2 + 1050) {
       $("#videobox .video").width("90%");
       $("#videobox p").width("90%");
       $("#videobox .container").width("1440px");
@@ -190,7 +190,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
     if (ws > p3) {
-      $('#black').width((ws - 8000) / 8 + '%')
+      $('#black').width((ws - 7500) / 7 + '%')
     }
 
   });
