@@ -11,8 +11,197 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
 
 
-/* 미디어쿼리 ~1099px */
-@media (max-width: 1099px){   
+@media (max-width:767px) {
+h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 4rem;  }
+h4 {    font-size: 3rem;  }
+h5 {    font-size: 2.2rem;  }
+h6 {    font-size: 1.9rem;  }
+p {    font-size: 1.2rem;  }
+
+  html {font-size: 10px;}
+  
+  .container {width: 100%; height: 100%; margin: 0 auto;}
+
+
+  /* 슬라이드 */
+  #slidewrap {width: 100%; height: 70vw; position: relative; overflow: hidden;}
+
+  #slidecontent {width: 100%; height: 100%;  position: absolute; 
+    position: relative; overflow: hidden; }
+  .slide {width: 300%; height: 100%;}
+  .slide li {width: 33.3333%; height: 100%; float: left; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;}
+  .slide li .img {width: 100%; height: 56.8vw; background-size: cover; background-position: center; background-repeat: no-repeat;}
+  /* .slide li h6 {font-size: 1.9rem;} */
+
+  #slideBG {width: 75vw; height: 100%;  background-color: var(--maincolor);opacity: 0.5; position: absolute; top: 0;}
+
+
+/* 섹션 1  */
+.part1 {width: 100%;  margin: 50px 0;}
+/* .part1 h6 {font-size: 1.8rem;} */
+.part1 .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
+.part1 .box {width: 100%; height: 480px; opacity: 0; transition: 0.8s; padding: 2%;}
+.part1 .box .imgbox { width: 100%; height: 58% }
+.newstext { overflow: hidden; /* height: 200px; */ text-overflow: ellipsis; display: -webkit-box;
+-webkit-line-clamp: 8; -webkit-box-orient: vertical; }
+/* .newstext p {display: none;} */
+.imgbox img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; position: relative; }
+
+
+
+
+  /* 섹션 2 */
+  /* back2023 */
+  .part2 { width: 100%; /* height: 4700px; */ /* height: 300vw; */ background-color: var(--black); display: flex;
+  flex-direction: column; /* justify-content: space-around; */}
+
+  #festival { width: 100%; /* height: 850px; */ overflow: hidden; /* margin-top: 2.7788vw; */}
+
+  #festival .container { position: relative;}
+
+  .year { display: flex; justify-content: center; letter-spacing: -50px; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
+
+  .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor); transition: all 1.5s;
+  }
+
+  .bg2023:nth-of-type(1) {transform: translateY(-50px);}
+  .bg2023:nth-of-type(2) {transform: translateY(-150px);}
+  .bg2023:nth-of-type(3) { transform: translateY(130px);}
+  .bg2023:nth-of-type(4) { transform: translateY(40px);}
+
+
+
+  .back2023 { color: var(--white); width: 100%; /* height: 100%; */  display: flex; justify-content: center;  align-items: center; /* margin: 100px; */ position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
+
+  .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
+
+  .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;}
+
+  .back_big { font-size: 2rem; }
+
+  .back_small { font-size: 2rem; margin: 0 30px;}
+
+
+  /* videobox */
+  #videobox { width: 100%; overflow: hidden; /* transform: translate(0px, 100px ); */ /* transition: all .5s; */}
+  #videobox .container {display: flex; flex-wrap: wrap; justify-content: center; transition: width 0.5s; /* width: 100%; *//* transform-origin: center; */position: relative;}
+  #videobox .video {/* width: 1296px; */ width: 100%; height: 59vw; background-color: lightgray; position: relative;
+  transition: width 0.5s; display: flex; justify-content: center; align-items: center;}
+  .video video {width: 100%; height: 100%; object-fit: cover; position: absolute;}
+  .video button i { font-size: 4rem; color: var(--maincolor); transform: scale(1); overflow: hidden; background-color: white; width: 100px; height: 100px;line-height: 100px; border-radius: 50px; padding-left: 10px;
+  z-index: 5;}
+  #videobox p {color: var(--white); width: 90%;}
+
+
+
+
+
+
+
+  /* photoSlide */
+  #photoslide { width: 100%;height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; text-align: center; overflow: hidden; margin:20.8vw 0}
+
+  .imgboxBG { width: 100%; height: 100vh; position: relative; display: flex; flex-wrap: wrap;}
+  .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2; }
+  #photoslide .imgbox {width: 33.333%;height: 25%; /* position: absolute; */}
+  #photoslide .imgbox img {transform: scale(1) !important;}
+  #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;}
+  #photoslide .textbox { z-index: 5;position: absolute; transition: all 2s; transform: translateY(150px); opacity: 0;}
+  #photoslide .textbox h3 { color: var(--white); line-height: 4.5rem; }
+  #photoslide .textbox p { margin: 30px 0;color: var(--white);}
+  #photoslide button {width: 180px; height: 50px; border-radius: 50px; background-color: rgb(34, 34, 34, 0.8); color: var(--white); border: 3px solid var(--white); font-weight: 500;}
+  #photoslide button:hover {background-color: var(--maincolor);color: black; border: 5px solid var(--maincolor);
+  transition: 0.3s ease;font-weight: 600; }
+  .activegray {filter: grayscale(0.8); transition: 50ms;}
+
+  /* awards list */
+  #awards { width: 100%;/* height: auto; */color: var(--white);margin-bottom: 9.8vw; padding: 2%;}
+  #awards>.container { display: flex;flex-wrap: wrap;justify-content: space-between;}
+  .leftbox { width: 100%; display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 4rem - 110px);}
+  .list {display: flex;  height: 15rem; margin: 10px 0;}
+  .list img {width: 30%; height: 100%; object-fit: contain;}
+
+
+  .rightbox {display: none;}
+
+
+
+
+
+
+  /* .rightbox>.imgbox img { width: 100%; height: 100%; object-fit: fill;}
+  .rightbox>.imgbox img:not(:first-of-type) {display: none;} */
+  .awardslist {position: relative;border-bottom: 1px solid white; width: 70%; margin-left: 15px;}
+  .leftbox:not(.awardslist:first) {margin-top: 10px;}
+  .awardslist p {margin: 20px 0 10px 0; position: absolute; bottom: 0;}
+  .awardslist h6 { font-size: 1.8rem; font-family: 'Raleway', sans-serif; font-style: italic;}
+  /* .awardslist p { text-align: right;} */
+  #awards h3 { line-height: 4rem; margin-bottom: 50px; width: 100%;}
+  .active {color: var(--maincolor); transition: 0.3s; border-bottom: 1px solid var(--maincolor);}
+  .ac_awardname {transform: translate(-100px);}
+  /* .rightbox {width: 40%;height: 100%; height: calc(100% - 4rem - 110px);
+  }
+  .rightbox>.imgbox {width: 100%; position: sticky; top: 0;} */
+
+
+
+  
+  
+  
+  /* 섹션 3 */
+  /* in French Theater */
+  #french {width: 100%; margin: 100px 0 50px 0;padding: 0 2%; }
+#french .container { display: flex; flex-wrap: wrap; align-content: space-between; }
+#french .textbox { width: 100%; }
+#french h4 { line-height: 3.5rem; }
+#french hr { width: 100%; border: 1px solid var(--black); margin: 20px 0; }
+#french .imgbox { display: flex; justify-content: space-between; flex-wrap: wrap; }
+#french .box { overflow: hidden; width: 48%; height: auto; position: relative; transform: translateY(100px); opacity: 0; margin: 1%;}
+#french img:hover { transform: scale(1.25); transition: all 0.3s ease-in-out; }
+
+
+
+  /* Stage for world */
+  #stageforworld { width: 100%; position: relative; overflow: hidden;}
+  #stageforworld h3 { font-size: 2.5rem;
+      text-align: center; 
+      padding: 50px 50px 0 50px;
+  overflow: hidden; flex: 1;  }
+  .text {width: 100%; height: 100%; }
+  .text_container {display: flex; position: absolute; overflow: hidden; }
+  #black, #blackb {display: none;}
+
+  #stageforworld .img:hover img { transform: scale(1.2);}
+  .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
+  #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
+  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+  #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
+  margin: 10px; position: absolute; bottom: 0; z-index: 5;}
+
+
+
+
+
+
+
+
+  
+}
+
+
+
+@media (min-width:768px) and (max-width: 1099px){   
+  /* 미디어쿼리 ~1099px */
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
+  html {font-size: 12px;}
   
   
   .container {width: 100%; height: 100%; margin: 0 auto;}
@@ -24,13 +213,153 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
   #slidecontent {width: 100%; height: 100%;  position: absolute; 
     position: relative; overflow: hidden; }
   .slide {width: 300%; height: 100%;}
-  .slide li {width: 33.3333%; height: 100%; float: left; display: flex; flex-wrap: wrap; justify-content: center;}
+  .slide li {width: 33.3333%; height: 100%; float: left; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;}
   .slide li .img {width: 100%; height: 56.8vw; background-size: cover; background-position: center; background-repeat: no-repeat;}
-  .slide li h6 {width:38.5rem; }
+  /* .slide li h6 {width:38.5rem; } */
 
   #slideBG {width: 75vw; height: 100%;  background-color: var(--maincolor); position: absolute; top: 0;}
 
 
+/* 섹션 1  */
+.part1 {width: 100%;  margin: 50px 0;}
+.part1 h6 {font-size: 1.8rem;}
+.part1 .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
+.part1 .box {width: 50%; height: 480px; opacity: 0; transition: 0.8s; padding: 2%;}
+.part1 .box .imgbox { width: 100%; height: 58% }
+.newstext { overflow: hidden; /* height: 200px; */ text-overflow: ellipsis; display: -webkit-box;
+-webkit-line-clamp: 8; -webkit-box-orient: vertical; }
+.imgbox img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; position: relative; }
+
+
+
+
+  /* 섹션 2 */
+  /* back2023 */
+  .part2 { width: 100%; /* height: 4700px; */ /* height: 300vw; */ background-color: var(--black); display: flex;
+  flex-direction: column; /* justify-content: space-around; */}
+
+  #festival { width: 100%; /* height: 850px; */ overflow: hidden; /* margin-top: 2.7788vw; */}
+
+  #festival .container { position: relative;}
+
+  .year { display: flex; justify-content: center; letter-spacing: -50px; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
+
+  .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor); transition: all 1.5s;
+  }
+
+  .bg2023:nth-of-type(1) {transform: translateY(-50px);}
+  .bg2023:nth-of-type(2) {transform: translateY(-150px);}
+  .bg2023:nth-of-type(3) { transform: translateY(130px);}
+  .bg2023:nth-of-type(4) { transform: translateY(40px);}
+
+
+
+  .back2023 { color: var(--white); width: 100%; /* height: 100%; */  display: flex; justify-content: center;  align-items: center; /* margin: 100px; */ position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
+
+  .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
+
+  .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;}
+
+  .back_big { font-size: 3rem; }
+
+  .back_small { font-size: 2rem; margin: 0 30px;}
+
+
+  /* videobox */
+  #videobox { width: 100%; overflow: hidden; /* transform: translate(0px, 100px ); */ /* transition: all .5s; */}
+  #videobox .container {display: flex; flex-wrap: wrap; justify-content: center; transition: width 0.5s; /* width: 100%; *//* transform-origin: center; */position: relative;}
+  #videobox .video {/* width: 1296px; */ width: 100%; height: 59vw; background-color: lightgray; position: relative;
+  transition: width 0.5s; display: flex; justify-content: center; align-items: center;}
+  .video video {width: 100%; height: 100%; object-fit: cover; position: absolute;}
+  .video button i { font-size: 4rem; color: var(--maincolor); transform: scale(1); overflow: hidden; background-color: white; width: 100px; height: 100px;line-height: 100px; border-radius: 50px; padding-left: 10px;
+  z-index: 5;}
+  #videobox p {color: var(--white); width: 90%;}
+
+
+
+
+
+
+
+  /* photoSlide */
+  #photoslide { width: 100%;height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; text-align: center; overflow: hidden; margin:20.8vw 0}
+
+  .imgboxBG { width: 100%; height: 100vh; position: relative; display: flex; flex-wrap: wrap;}
+  .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2; }
+  #photoslide .imgbox {width: 33.333%;height: 25%; /* position: absolute; */}
+  #photoslide .imgbox img {transform: scale(1) !important;}
+  #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;}
+  #photoslide .textbox { z-index: 5;position: absolute; transition: all 2s; transform: translateY(150px); opacity: 0;}
+  #photoslide .textbox h3 { color: var(--white); line-height: 4.5rem; }
+  #photoslide .textbox p { width: 650px; margin: 30px 0;color: var(--white);}
+  #photoslide button {width: 180px; height: 50px; border-radius: 50px; background-color: rgb(34, 34, 34, 0.8); color: var(--white); border: 3px solid var(--white); font-weight: 500;}
+  #photoslide button:hover {background-color: var(--maincolor);color: black; border: 5px solid var(--maincolor);
+  transition: 0.3s ease;font-weight: 600; }
+  .activegray {filter: grayscale(0.8); transition: 50ms;}
+
+  /* awards list */
+  #awards { width: 100%;/* height: auto; */color: var(--white);margin-bottom: 9.8vw; padding: 2%;}
+  #awards>.container { display: flex;flex-wrap: wrap;justify-content: space-between;}
+  .leftbox { width: 100%; display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 4rem - 110px);}
+  .list {display: flex;  height: 11rem; margin: 10px 0;}
+  .list img {width: 30%; height: 100%; object-fit: contain;}
+
+
+  .rightbox {display: none;}
+
+
+
+
+
+
+  /* .rightbox>.imgbox img { width: 100%; height: 100%; object-fit: fill;}
+  .rightbox>.imgbox img:not(:first-of-type) {display: none;} */
+  .awardslist {position: relative;border-bottom: 1px solid white; width: 70%;}
+  .leftbox:not(.awardslist:first) {margin-top: 10px;}
+  .awardslist p {margin: 20px 0 10px 0; position: absolute; bottom: 0;}
+  .awardslist h6 { font-size: 1.8rem; font-family: 'Raleway', sans-serif; font-style: italic;}
+  /* .awardslist p { text-align: right;} */
+  #awards h3 { line-height: 4rem; margin-bottom: 50px; width: 100%;}
+  .active {color: var(--maincolor); transition: 0.3s; border-bottom: 1px solid var(--maincolor);}
+  .ac_awardname {transform: translate(-100px);}
+  /* .rightbox {width: 40%;height: 100%; height: calc(100% - 4rem - 110px);
+  }
+  .rightbox>.imgbox {width: 100%; position: sticky; top: 0;} */
+
+
+
+  
+  
+  
+  /* 섹션 3 */
+  /* in French Theater */
+  #french {width: 100%; margin: 100px 0 50px 0;padding: 0 2%; }
+#french .container { display: flex; flex-wrap: wrap; align-content: space-between; }
+#french .textbox { width: 100%; }
+#french h4 { line-height: 3.5rem; }
+#french hr { width: 100%; border: 1px solid var(--black); margin: 40px 0; }
+#french .imgbox { display: flex; justify-content: space-between; }
+#french .box { overflow: hidden; width: 24%; height: auto; position: relative; transform: translateY(100px); opacity: 0; }
+#french img:hover { transform: scale(1.25); transition: all 0.3s ease-in-out; }
+
+
+
+  /* Stage for world */
+  #stageforworld { width: 100%; position: relative; overflow: hidden;}
+  #stageforworld h3 { font-size: 3.5rem;
+      text-align: center; 
+      padding: 50px 50px 0 50px;
+  overflow: hidden; flex: 1;  }
+  .text {width: 100%; height: 100%; }
+  .text_container {display: flex; position: absolute; overflow: hidden; }
+  #black, #blackb {display: none;}
+
+  #stageforworld .img:hover img { transform: scale(1.2);}
+  .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
+  #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
+  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+  #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
+  margin: 10px; position: absolute; bottom: 0; z-index: 5;}
 
 
 
@@ -49,30 +378,162 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
 /* 미디어쿼리 1100px~1266px */
 @media  (min-width: 1100px) and (max-width:1266px){
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
   html {font-size: 12px;}
 
   .container {width: 100%; height: 100%; margin: 0 auto;}
 
   /* 슬라이드 */
-  #slidewrap {width: 100%; height: 760px; position: relative ; overflow: hidden;}
+  #slidewrap {width: 100%; height: 750px; position: relative ; overflow: hidden;}
 
   #slidecontent {width: 100%; height: 100%;  position: absolute; overflow: hidden;
   position: relative;  }
   .slide {width: 300%; height: 100%;}
-  .slide li {width: 33.3333%; height: 100%; float: left;  display: flex; flex-wrap: wrap; justify-content: center;}
+  .slide li {width: 33.3333%; height: 100%; float: left;  display: flex; flex-wrap: wrap; justify-content: center; text-align: center;}
   .slide li .img {width: 100%; height: 625px; background-size: cover; background-position: center; background-repeat: no-repeat;}
-  .slide li h6 {width:38.5rem; }
+  /* .slide li h6 {width:38.5rem; } */
 
   #slideBGsub {width: 25vw; height:calc(100% - 625px); background-color: #F1EEE9; position: absolute; bottom: 0; right: 0; z-index: 5;}
   #slideBG {width: 100%; height: 100%;  background-color: var(--maincolor); position: absolute; top: 0;}
 
-
-
-
-
-
-
-
+ /* 섹션 1  */
+ .part1 {width: 100%;  margin: 100px 0;}
+ .part1 h6 {font-size: 1.8rem;}
+ .part1 .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
+ .part1 .box {width: 50%; height: 480px; opacity: 0; transition: 0.8s; padding: 2%;}
+ .part1 .box .imgbox { width: 100%; height: 58% }
+ .newstext { overflow: hidden; /* height: 200px; */ text-overflow: ellipsis; display: -webkit-box;
+ -webkit-line-clamp: 8; -webkit-box-orient: vertical; }
+ .imgbox img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; position: relative; }
+ 
+ 
+ 
+ 
+   /* 섹션 2 */
+   /* back2023 */
+   .part2 { width: 100%; /* height: 4700px; */ /* height: 300vw; */ background-color: var(--black); display: flex;
+   flex-direction: column; /* justify-content: space-around; */}
+ 
+   #festival { width: 100%; /* height: 850px; */ overflow: hidden; /* margin-top: 2.7788vw; */}
+ 
+   #festival .container { position: relative;}
+ 
+   .year { display: flex; justify-content: center; letter-spacing: -50px; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
+ 
+   .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor); transition: all 1.5s;
+   }
+ 
+   .bg2023:nth-of-type(1) {transform: translateY(-50px);}
+   .bg2023:nth-of-type(2) {transform: translateY(-150px);}
+   .bg2023:nth-of-type(3) { transform: translateY(130px);}
+   .bg2023:nth-of-type(4) { transform: translateY(40px);}
+ 
+ 
+ 
+   .back2023 { color: var(--white); width: 100%; /* height: 100%; */  display: flex; justify-content: center;  align-items: center; /* margin: 100px; */ position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
+ 
+   .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
+ 
+   .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;}
+ 
+   .back_big { font-size: 4rem; }
+ 
+   .back_small { font-size: 2rem; margin: 0 30px;}
+ 
+ 
+   /* videobox */
+   #videobox { width: 100%; height: 700px; overflow: hidden; /* transform: translate(0px, 100px ); */ /* transition: all .5s; */}
+   #videobox .container {display: flex; flex-wrap: wrap; justify-content: center; transition: width 0.5s; /* width: 100%; *//* transform-origin: center; */position: relative;}
+   #videobox .video {/* width: 1296px; */ width: 100%; height: 650px; background-color: lightgray; position: relative;
+   transition: width 0.5s; display: flex; justify-content: center; align-items: center;}
+   .video video {width: 100%; height: 100%; object-fit: cover; position: absolute;}
+   .video button i { font-size: 4rem; color: var(--maincolor); transform: scale(1); overflow: hidden; background-color: white; width: 100px; height: 100px;line-height: 100px; border-radius: 50px; padding-left: 10px;
+   z-index: 5;}
+   #videobox p {color: var(--white); width: 90%;}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   /* photoSlide */
+   #photoslide { width: 100%;height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; text-align: center; overflow: hidden; margin:20.8vw 0}
+ 
+   .imgboxBG { width: 100%; height: 100vh; position: relative; display: flex; flex-wrap: wrap;}
+   .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2; }
+   #photoslide .imgbox {width: 33.333%;height: 25%; /* position: absolute; */}
+   #photoslide .imgbox img {transform: scale(1) !important;}
+   #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;}
+   #photoslide .textbox { z-index: 5;position: absolute; transition: all 2s; transform: translateY(150px); opacity: 0;}
+   #photoslide .textbox h3 { color: var(--white); line-height: 4.5rem; }
+   #photoslide .textbox p { width: 650px; margin: 30px 0;color: var(--white);}
+   #photoslide button {width: 180px; height: 50px; border-radius: 50px; background-color: rgb(34, 34, 34, 0.8); color: var(--white); border: 3px solid var(--white); font-weight: 500;}
+   #photoslide button:hover {background-color: var(--maincolor);color: black; border: 5px solid var(--maincolor);
+   transition: 0.3s ease;font-weight: 600; }
+   .activegray {filter: grayscale(0.8); transition: 50ms;}
+ 
+   /* awards list */
+   #awards { width: 100%;/* height: auto; */color: var(--white);margin-bottom: 9.8vw;height: 121vw; padding: 2%;}
+   #awards>.container { display: flex;flex-wrap: wrap;justify-content: space-between;}
+   .leftbox { width: 50%; display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 4rem - 110px);}
+   .rightbox>.imgbox img { width: 100%; height: 100%; object-fit: fill;}
+   .rightbox>.imgbox img:not(:first-of-type) {display: none;}
+   .awardslist {position: relative;border-bottom: 1px solid white;}
+   .leftbox:not(.awardslist:first) {margin-top: 10px;}
+   .awardslist p {margin: 20px 0 10px 0;}
+   .awardslist h6 { font-size: 1.8rem; font-family: 'Raleway', sans-serif; font-style: italic;}
+   .awardslist p { text-align: right;}
+   #awards h3 { line-height: 4rem; margin-bottom: 50px; width: 100%;}
+   .active {color: var(--maincolor);transform: translate(100px); transition: 0.3s; border-bottom: 1px solid var(--maincolor);}
+   .rightbox {width: 40%;height: 100%; height: calc(100% - 4rem - 110px);
+   }
+   .rightbox>.imgbox {width: 100%; position: sticky; top: 0;}
+   #french {width: 100%; margin: 100px 0 50px 0;padding: 2%; }
+ 
+ .leftbox .list>img {display: none;}
+ 
+ /* 섹션 3 */
+ /* in French Theater */
+ #french .container { display: flex; flex-wrap: wrap; align-content: space-between; }
+ #french .textbox { width: 100%; }
+ #french h4 { line-height: 3.5rem; }
+ #french hr { width: 100%; border: 1px solid var(--black); margin: 40px 0; }
+ #french .imgbox { display: flex; justify-content: space-between; }
+ #french .box { overflow: hidden; width: 24%; height: auto; position: relative; transform: translateY(100px); opacity: 0; }
+ /* #french img {width: 100%;height: 460px;} */
+ #french img:hover { transform: scale(1.25); transition: all 0.3s ease-in-out; }
+ 
+ 
+ 
+   /* Stage for world */
+   #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
+   #stageforworld h3 { 
+     /* letter-spacing: -2px; */
+      line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+   overflow: hidden; flex: 1;  }
+   /* #stageforworld h3 {letter-spacing: -2px;line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+   overflow: hidden; flex: 1;} */
+   .text {width: 100%; height: 100%;}
+   .skew { transform: skewX(-15deg);}
+   .text_container {/* height: 100vh; */width: 73vw; display: flex; position: absolute; overflow: hidden; }
+   .text_container:first-child { opacity: 0.2;}
+   #black {  width: 00%;  animation: 8s ease-in-out; overflow: hidden; transform: skewX(15deg);}
+   #blackb {clip-path: polygon(0 60%, 0% 100%, 10% 100%);}
+ 
+   #stageforworld .img:hover img { transform: scale(1.2);}
+   .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
+   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
+   #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+   #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
+   margin: 10px; position: absolute; bottom: 0; z-index: 5;}
 
 
 }
@@ -84,6 +545,14 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
 /* 미디어쿼리 1267px~1456px */
 @media (min-width: 1267px ) and (max-width: 1456px){
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
   html {font-size: 12px;}
 
   .container {width: 100%; height: 100%; margin: 0 auto;}
@@ -170,7 +639,7 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
   #photoslide { width: 100%;height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; text-align: center; overflow: hidden; margin:20.8vw 0}
 
   .imgboxBG { width: 100%; height: 100vh; position: relative; display: flex; flex-wrap: wrap;}
-  .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2;}
+  .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2; }
   #photoslide .imgbox {width: 33.333%;height: 25%; /* position: absolute; */}
   #photoslide .imgbox img {transform: scale(1) !important;}
   #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;}
@@ -179,11 +648,11 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
   #photoslide .textbox p { width: 650px; margin: 30px 0;color: var(--white);}
   #photoslide button {width: 180px; height: 50px; border-radius: 50px; background-color: rgb(34, 34, 34, 0.8); color: var(--white); border: 3px solid var(--white); font-weight: 500;}
   #photoslide button:hover {background-color: var(--maincolor);color: black; border: 5px solid var(--maincolor);
-  transition: 0.3s ease;font-weight: 600;}
-
+  transition: 0.3s ease;font-weight: 600; }
+  .activegray {filter: grayscale(0.8); transition: 50ms;}
 
   /* awards list */
-  #awards { width: 100%;/* height: auto; */color: var(--white);margin-bottom: 9.8vw;height: 97vw;}
+  #awards { width: 100%;/* height: auto; */color: var(--white);margin-bottom: 9.8vw;height: 110vw;; padding: 2%;}
   #awards>.container { display: flex;flex-wrap: wrap;justify-content: space-between;}
   .leftbox { width: 50%; display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 4rem - 110px);}
   .rightbox>.imgbox img { width: 100%; height: 100%; object-fit: fill;}
@@ -197,13 +666,14 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
   .active {color: var(--maincolor);transform: translate(100px); transition: 0.3s; border-bottom: 1px solid var(--maincolor);}
   .rightbox {width: 40%;height: 100%; height: calc(100% - 4rem - 110px);
   }
-  .rightbox>.imgbox {width: 100%;height: 740px;position: sticky; top: 0;}
+  .rightbox>.imgbox {width: 100%; position: sticky; top: 0;}
+  .leftbox .list>img {display: none;}
+  
+  
+  
+  /* 섹션 3 */
+  /* in French Theater */
   #french {width: 100%; margin: 100px 0 50px 0;padding: 2%; }
-
-
-
-/* 섹션 3 */
-/* in French Theater */
 #french .container { display: flex; flex-wrap: wrap; align-content: space-between; }
 #french .textbox { width: 100%; }
 #french h4 { line-height: 3.5rem; }
@@ -217,8 +687,12 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
   /* Stage for world */
   #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
-  #stageforworld h3 {letter-spacing: -2px;line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
-  overflow: hidden; flex: 1;}
+  #stageforworld h3 { 
+    /* letter-spacing: -2px; */
+     line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+  overflow: hidden; flex: 1;  }
+  /* #stageforworld h3 {letter-spacing: -2px;line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+  overflow: hidden; flex: 1;} */
   .text {width: 100%; height: 100%;}
   .skew { transform: skewX(-15deg);}
   .text_container {/* height: 100vh; */width: 73vw; display: flex; position: absolute; overflow: hidden; }
@@ -238,6 +712,14 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
 /* 미디어쿼리 1457px ~ */
 @media (min-width: 1457px) {
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
   html { font-size: 15px;}
 
   .container { width: 1440px; height: 100%; margin: 0 auto;}
@@ -331,7 +813,7 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
 
   /* awards list */
-  #awards { width: 100%; height: 1400px; color: var(--white); margin-bottom: 9.8vw;}
+  #awards { width: 100%; height: 94.333rem; color: var(--white); margin-bottom: 9.8vw;}
   #awards>.container { display: flex; flex-wrap: wrap; justify-content: space-between; }
   .leftbox { width: 50%;display: flex; flex-direction: column;justify-content: flex-start; height: calc(100% - 4rem - 110px);}
 
@@ -355,6 +837,7 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
   .rightbox { width: 40%; /* height: 100%; */ height: calc(100% - 4rem - 110px); }
   .rightbox>.imgbox { width: 100%; /* height: 740px; */ position: sticky; top: 0; }
 
+  .leftbox .list>img {display: none;}
 
 
 
@@ -375,7 +858,9 @@ h3, h6, span {font-family: 'Playfair Display', serif;}
 
   /* Stage for world */
   #stageforworld { width: 100%; height: 1300px; position: relative; overflow: hidden; }
-  #stageforworld h3 { letter-spacing: -2px; line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+  #stageforworld h3 { 
+    /* letter-spacing: -2px; */
+     line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
   overflow: hidden; flex: 1;  }
 
   .text { width: 100%; height: 100%; }

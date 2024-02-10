@@ -36,11 +36,13 @@ $(function () {
 $(function () {
 
   // 수상내역 마우스 호버시 포스터 바뀜
-  $('.awardslist').mouseenter(function () {
+  $('.list').mouseenter(function () {
     let idx = $(this).index()
 
     $('.awardslist').removeClass('active')
-    $(this).addClass('active')
+    $(this).find('.awardslist').addClass('active')
+
+
 
     $('.rightbox img').hide();
     $('.rightbox img').eq(idx).stop().fadeIn('fast');
@@ -50,10 +52,13 @@ $(function () {
 
   // 포토슬라이드 버튼 호버하면 이미지 어둡게
   $('#photoslide button').mouseenter(function () {
+    $('.imgboxBG').addClass('activegray');
     $('.imgboxBG').fadeTo('50ms', 0.3);
   })
   $('#photoslide button').mouseout(function () {
+    $('.imgboxBG').removeClass('activegray');
     $('.imgboxBG').fadeTo("50ms", 1);
+
   })
 
 })

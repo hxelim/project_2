@@ -12,79 +12,95 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/main_slide.js"></script>
+  <script src="js/common.js"></script>
 
 
 </head>
 
 <body>
-
   <div id="wrap">
     <!-- 헤더 -->
     <header>
-      <div class="container">
-        <nav>
-
-          <ul class="Mnav">
-            <li><a href="#">NEWS & Topics</a>
-              <ul class="sub_nav">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Artistic Director’s Blog</a></li>
-                <li><a href="#">Cannes Topics</a></li>
-              </ul>
-            </li>
-            <li><a href="#">76TH FESTIVAL</a>
-              <ul class="sub_nav">
-                <li><a href="#">Juries</a></li>
-                <li><a href="#">Selection</a></li>
-                <li><a href="#">awards</a></li>
-                <li><a href="#">Events</a></li>
-              </ul>
-            </li>
-            <li><a href="#">PROGRAM</a>
-              <ul class="sub_nav">
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Ticket info</a></li>
-                <li><a href="#">Accessibility</a></li>
-              </ul>
-            </li>
-
-          </ul>
-          <a href="index.html" class="logo" style="background-image: url(img/main/Logo1.png);"></a>
-          <ul class="Mnav">
-            <li><a href="#">TAKE PART</a>
-              <ul class="sub_nav">
-                <li><a href="#">Submit a film</a></li>
-                <li><a href="#">Accreditations</a></li>
-                <li><a href="#">Your Festival Experience</a></li>
-              </ul>
-            </li>
-            <li><a href="#">EXPLORE</a>
-              <ul class="sub_nav">
-                <li><a href="#">Retrospective</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">Cannes Sequence</a></li>
-                <li><a href="#">Cannes Focus</a></li>
-              </ul>
-            </li>
-            <li><a href="#">CANNES STORY</a>
-              <ul class="sub_nav">
-                <li><a href="#">The Festival today</a></li>
-                <li><a href="#">The history of the Festival</a></li>
-                <li><a href="#">The Palme d'or</a></li>
-                <li><a href="#">A Festival with a conscience</a></li>
-                <li><a href="#">Our team</a></li>
-                <li><a href="#">They support the Festival</a></li>
-              </ul>
-            </li>
-
-          </ul>
-
-        </nav>
-
+      <div class="nav_icon">
+        <div class="icon_mypage"><i class="fa-regular fa-user"></i></div>
+        <div class="top_logo">
+          <a href="#">
+            <img src="img/main/Logo1.png" alt="logo">
+          </a>
+        </div>
+        <div class="icon_menu"><i class="fa-regular fa-bars" style="font-weight: bold;"></i>
+        </div>
       </div>
-  </div>
-  <div class="emptybox"></div>
-  </header>
+      <ul id="menu">
+        <li><a href="#">NEWS & Topics</a>
+          <ul class="sub">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Artistic Director's Blog</a></li>
+            <li><a href="#">Cannes Topics</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li><a href="#">76TH FESTIVAL</a>
+          <ul class="sub">
+            <li><a href="#">Juries</a></li>
+            <li><a href="#">Selection</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li><a href="#">PROGRAM</a>
+          <ul class="sub">
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Ticket info</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li class="logo">
+          <a href="#">
+            <img src="img/main/Logo1.png" alt="logo">
+          </a>
+        </li>
+        <li><a href="#">TAKE PART</a>
+        
+          <ul class="sub">
+            <li><a href="#">Submit a film</a></li>
+            <li><a href="#">Accreditations</a></li>
+            <li><a href="#">Your Festival Experience</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li><a href="#">EXPLORE</a>
+          <ul class="sub">
+            <li><a href="#">Retrospective</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Cannes Sequence</a></li>
+            <li><a href="#">Cannes Focus</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li><a href="#">CANNES STORY</a>
+          <ul class="sub">
+            <li><a href="#">The Festival today</a></li>
+            <li><a href="#">The history of the Festival</a></li>
+            <li><a href="#">The Palme d'or</a></li>
+            <li><a href="#">A Festival with a conscience</a></li>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">They support the Festival</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div id="menuBg"></div>
+    </header>
 
   <!-- 슬라이더 -->
   <div id="slidewrap">
@@ -283,50 +299,78 @@
       <div class="container">
         <h3>AWARDS <br> EDITION 2023</h3>
         <div class="leftbox">
-          <div class="awardslist active">
-            <h5>ANATOMY OF A FALL</h5>
-            <h6>by Justine TRIET</h6>
-            <p>Palme d'or</p>
+          <div class="list">
+            <img src="img/main/poster1.jpg" alt="">
+            <div class="awardslist active">
+              <h5>ANATOMY OF A FALL</h5>
+              <h6>by Justine TRIET</h6>
+              <p>Palme d'or</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>THE ZONE OF INTEREST</h5>
-            <h6>by Jonathan GLAZER</h6>
-            <p>Grand Prix</p>
+          <div class="list">
+            <img src="img/main/poster2.jpg" alt="">
+            <div class="awardslist">
+              <h5>THE ZONE OF INTEREST</h5>
+              <h6>by Jonathan GLAZER</h6>
+              <p>Grand Prix</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>TRAN ANH HÙNG</h5>
-            <h6>for LA PASSION DE DODIN BOUFFANT</h6>
-            <p>Award for Best Director</p>
+
+          <div class="list">
+            <img src="img/main/poster3.jpg" alt="">
+            <div class="awardslist">
+              <h5>TRAN ANH HÙNG</h5>
+              <h6>for LA PASSION DE DODIN BOUFFANT</h6>
+              <p>Award for Best Director</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>FALLEN LEAVES</h5>
-            <h6>by Aki KAURISMAKI</h6>
-            <p>Jury Prize</p>
+          <div class="list">
+            <img src="img/main/poster4.jpg" alt="">
+            <div class="awardslist">
+              <h5>FALLEN LEAVES</h5>
+              <h6>by Aki KAURISMAKI</h6>
+              <p>Jury Prize</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>YUJI SAKAMOTO</h5>
-            <h6>for KAIBUTSU</h6>
-            <p>Award for Best Screenplay</p>
+          <div class="list">
+            <img src="img/main/poster5.jpg" alt="">
+            <div class="awardslist">
+              <h5>YUJI SAKAMOTO</h5>
+              <h6>for KAIBUTSU</h6>
+              <p>Award for Best Screenplay</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>MERVE DIZDAR</h5>
-            <h6>for KURU OTLAR USTUNE</h6>
-            <p>Award for Best Actress</p>
+          <div class="list">
+            <img src="img/main/poster6.jpg" alt="">
+            <div class="awardslist">
+              <h5>MERVE DIZDAR</h5>
+              <h6>for KURU OTLAR USTUNE</h6>
+              <p>Award for Best Actress</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>KOJI YAKUSHO</h5>
-            <h6>for PERFECT DAYS</h6>
-            <p>Award for Best Actress</p>
+          <div class="list">
+            <img src="img/main/poster7.jpg" alt="">
+            <div class="awardslist">
+              <h5>KOJI YAKUSHO</h5>
+              <h6>for PERFECT DAYS</h6>
+              <p>Award for Best Actress</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>JOHNNIE BURN</h5>
-            <h6>for THE ZONE OF INTEREST</h6>
-            <p>CST Award for Technical Artist</p>
+          <div class="list">
+            <img src="img/main/poster8.jpg" alt="">
+            <div class="awardslist">
+              <h5>JOHNNIE BURN</h5>
+              <h6>for THE ZONE OF INTEREST</h6>
+              <p>CST Award for Technical Artist</p>
+            </div>
           </div>
-          <div class="awardslist">
-            <h5>ANNE-SOPHIE DELSERIES</h5>
-            <h6>for LE THÉORÈME DE MARGUERITE</h6>
-            <p>Young Film Technician Prize, <br> awarded by the C.S.T.</p>
+          <div class="list">
+            <img src="img/main/poster9.jpg" alt="">
+            <div class="awardslist">
+              <h5>ANNE-SOPHIE DELSERIES</h5>
+              <h6>for LE THÉORÈME DE MARGUERITE</h6>
+              <p>Young Film Technician Prize, <br> awarded by the C.S.T.</p>
+            </div>
           </div>
 
 
@@ -430,12 +474,47 @@
     <div class="footer_L">
       <div class="textbox">
         <h5>77th EDITION <br>
-          May 14-25, 2024</h5> <br><br>
+          May 14-25, 2024</h5>
         <div class="contact">
           <p><span>Contact Us</span><br>
             Tel: +33 (0) 1 53 59 61 00 <br>
             Fax : +33 (0)1 53 59 61 10 <br>
             5, rue Charlot 75003 Paris - France </p>
+        </div>
+        <div class="iconbox">
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+          </a>
+        </div>
+        <div class="mailadress">
+          <input type="text" placeholder="     Your Email Address">
         </div>
       </div>
     </div>
