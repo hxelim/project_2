@@ -4,32 +4,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+  <script>
+$(function(){
+  // 초기 메뉴 배경 높이 설정
+  updateMenuBgHeight();
+
+  // 윈도우 리사이즈 이벤트
+  $(window).resize(function() {
+    updateMenuBgHeight();
+  });
+
+  function updateMenuBgHeight() {
+    let maxHeight = 0;
+    $('#menu > li > .sub').each(function() {
+      maxHeight = Math.max(maxHeight, $(this).height());
+    });
+    $('#menuBg').css({height: maxHeight});
+  }
+
+  // 메뉴 호버 이벤트
+  $('#menu').hover(
+    function(){
+      $('.sub').stop().slideDown();
+      updateMenuBgHeight();
+      $('#menuBg').stop().slideDown();
+    },
+    function(){
+      $('.sub').stop().slideUp();
+      $('#menuBg').stop().slideUp();
+    }
+  );
+});
+
+  </script>
   <style>
     * {margin: 0; padding: 0;}
     ul,li,ol {list-style: none;}
     a {color: #333; text-decoration: none;}
 
     html {font-size: 15px}
-    #menu {width: 1440px; height: 100px; background-color: aquamarine; margin: 0 auto;}
-    #menu>li {float: left; width: 240px; text-align: center; line-height: 3rem; } 
-    
+    header {width: 100%; height: 6.6rem; background-color: blue;}
+    header >.logo {height: 100%; width: 100%; }
+
+    #menu {width: 1440px; height: 100%;   background-color: aquamarine; margin: 0 auto;}
+    header>.logo>a>img {width: 100%; height: 100%; object-fit: contain; transform: scale(0.75); }  
+    #menu>li {float: left; width: 14.285%; text-align: center; line-height: 3rem; height: 100%; display: block;} 
+    #menu>li>a {line-height: 6.6rem; font-weight: bold;font-size: 1rem; background-color: antiquewhite; display: block; height: 100%;}
+    #menu img {width: 100%; height: 100%; object-fit: contain; transform: scale(0.75);}
+
+    .sub {
+      display: none;
+    }
+    .sub>li:hover {background-color: gold;}
+    .sub>li:hover a  {color: white; font-size: 1rem}
+    .sub>li>a {display: block;}
+
+    #menuBg {width: 100%; height: 3rem; background-color: pink;
+    display: none;}
+
+  /* 미디어 쿼리 */
+  @media (max-width: 1099px){
+    html {font-size: 12px;} /* 폰트 크기 축소 */
+    #menu {width: 100%;} /* 메뉴 너비 조정 */
+    #menu>li {width: 16.666%;}
+    #menu .logo {display: none;}
+
+  }
+
+
+  @media (min-width: 1100px) and (max-width: 1266px){
+    html {font-size: 13px;} /* 폰트 크기 축소 */
+    header {height: 6.6rem;}
+    #menu {width: 100%;;} /* 메뉴 너비 조정 */
+    #menu>li {width: 16.666%;}
+    #menu .logo {display: none;}
+
+  }
+
+  @media (min-width: 1267px ) and (max-width: 1456px) {
+    html {font-size: 14px;} /* 폰트 크기 축소 */
+    #menu {width: 100%;} /* 메뉴 너비 조정 */
+    header .logo {display: none;}
+  }
+
+  @media (min-width: 1457px) {
+    html {font-size: 15px;} /* 기본 폰트 크기 복원 */
+    #menu {width: 1440px;} /* 기본 메뉴 너비 복원 */
+    header .logo {display: none;}
+
+  }
+
+
   </style>
 </head>
 <body>
   <header>
+    <div class="logo"><a href="#">
+      <img src="img/main/Logo1.png" alt="logo">
+    </a></div>
     <ul id="menu">
-      <li><a href="#">NEWS & Topics</a></li>
-      <li><a href="#">76TH FESTIVAL</a></li>
-      <li><a href="#">PROGRAM</a></li>
-      <li><a href="#">
-          <a>
-            <div class="img" style="background-image: url(img/main/Logo1.png);"></div>
+      <li><a href="#">NEWS & Topics</a>
+        <ul class="sub">
+          <li><a href="#">News</a></li>
+          <li><a href="#">Artistic Director's Blog</a></li>
+          <li><a href="#">Cannes Topics</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li><a href="#">76TH FESTIVAL</a>
+        <ul class="sub">
+          <li><a href="#">Juries</a></li>
+          <li><a href="#">Selection</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li><a href="#">PROGRAM</a>
+        <ul class="sub">
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Ticket info</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li class="logo"><a href="#">
+            <img src="img/main/Logo1.png" alt="logo">
           </a>
       </li>
-      <li><a href="#">TAKE PART</a></li>
-      <li><a href="#">EXPLORE</a></li>
-      <li><a href="#">CANNES STORY</a></li>
+      <li><a href="#">TAKE PART</a>
+      
+        <ul class="sub">
+          <li><a href="#">Submit a film</a></li>
+          <li><a href="#">Accreditations</a></li>
+          <li><a href="#">Your Festival Experience</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li><a href="#">EXPLORE</a>
+        <ul class="sub">
+          <li><a href="#">Retrospective</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Cannes Sequence</a></li>
+          <li><a href="#">Cannes Focus</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li><a href="#">CANNES STORY</a>
+        <ul class="sub">
+          <li><a href="#">The Festival today</a></li>
+          <li><a href="#">The history of the Festival</a></li>
+          <li><a href="#">The Palme d'or</a></li>
+          <li><a href="#">A Festival with a conscience</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">They support the Festival</a></li>
+        </ul>
+      </li>
     </ul>
+    <div id="menuBg"></div>
   </header>
 </body>
 </html>
