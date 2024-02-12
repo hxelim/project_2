@@ -25,7 +25,7 @@ p {    font-size: 1.2rem;  }
 
 
   /* 슬라이드 */
-  #slidewrap {width: 100%; height: 70vw; position: relative; overflow: hidden;}
+  #slidewrap {width: 100%; height: 74vw; position: relative; overflow: hidden;}
 
   #slidecontent {width: 100%; height: 100%;  position: absolute; 
     position: relative; overflow: hidden; }
@@ -41,7 +41,7 @@ p {    font-size: 1.2rem;  }
 .part1 {width: 100%;  margin: 50px 0;}
 /* .part1 h6 {font-size: 1.8rem;} */
 .part1 .container {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between;}
-.part1 .box {width: 100%; height: 480px; opacity: 0; transition: 0.8s; padding: 2%;}
+.part1 .box {width: 100%; height: 480px;  transition: 0.8s; padding: 2%;}
 .part1 .box .imgbox { width: 100%; height: 58% }
 .newstext { overflow: hidden; /* height: 200px; */ text-overflow: ellipsis; display: -webkit-box;
 -webkit-line-clamp: 8; -webkit-box-orient: vertical; }
@@ -62,25 +62,27 @@ p {    font-size: 1.2rem;  }
 
   .year { display: flex; justify-content: center; letter-spacing: -50px; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
 
-  .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor); transition: all 1.5s;
+  .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor);
   }
-
+/* 
   .bg2023:nth-of-type(1) {transform: translateY(-50px);}
   .bg2023:nth-of-type(2) {transform: translateY(-150px);}
   .bg2023:nth-of-type(3) { transform: translateY(130px);}
-  .bg2023:nth-of-type(4) { transform: translateY(40px);}
+  .bg2023:nth-of-type(4) { transform: translateY(40px);} */
 
 
 
   .back2023 { color: var(--white); width: 100%; /* height: 100%; */  display: flex; justify-content: center;  align-items: center; /* margin: 100px; */ position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
 
-  .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
+  /* .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
 
-  .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;}
+  .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;} */
 
   .back_big { font-size: 2rem; }
 
-  .back_small { font-size: 2rem; margin: 0 30px;}
+  .back_small { font-size: 2rem; 
+    margin: 0 30px;
+  }
 
 
   /* videobox */
@@ -106,8 +108,8 @@ p {    font-size: 1.2rem;  }
   .imgboxBG:after {content: "";position: absolute;top: 0;left: 0;width: 100%; height: 100%;background-color: #222;  opacity: 0.2; }
   #photoslide .imgbox {width: 33.333%;height: 25%; /* position: absolute; */}
   #photoslide .imgbox img {transform: scale(1) !important;}
-  #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;}
-  #photoslide .textbox { z-index: 5;position: absolute; transition: all 2s; transform: translateY(150px); opacity: 0;}
+  /* #photoslide .ps1,.ps2,.ps3,.ps4,.ps5,.ps6 {transition: all 2s;transform: translateY(150px);opacity: 0;} */
+  #photoslide .textbox { z-index: 5;position: absolute; transition: all 2s; }
   #photoslide .textbox h3 { color: var(--white); line-height: 4.5rem; }
   #photoslide .textbox p { margin: 30px 0;color: var(--white);}
   #photoslide button {width: 180px; height: 50px; border-radius: 50px; background-color: rgb(34, 34, 34, 0.8); color: var(--white); border: 3px solid var(--white); font-weight: 500;}
@@ -157,7 +159,7 @@ p {    font-size: 1.2rem;  }
 #french h4 { line-height: 3.5rem; }
 #french hr { width: 100%; border: 1px solid var(--black); margin: 20px 0; }
 #french .imgbox { display: flex; justify-content: space-between; flex-wrap: wrap; }
-#french .box { overflow: hidden; width: 48%; height: auto; position: relative; transform: translateY(100px); opacity: 0; margin: 1%;}
+#french .box { overflow: hidden; width: 48%; height: auto; position: relative; margin: 1%;}
 #french img:hover { transform: scale(1.25); transition: all 0.3s ease-in-out; }
 
 
@@ -516,11 +518,8 @@ p {    font-size: 1.2rem;  }
    /* Stage for world */
    #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
    #stageforworld h3 { 
-     /* letter-spacing: -2px; */
-      line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
-   overflow: hidden; flex: 1;  }
-   /* #stageforworld h3 {letter-spacing: -2px;line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
-   overflow: hidden; flex: 1;} */
+    line-height: 4.6875vw; width: 73vw; text-align: left; padding: 50px 0 0 30px;font-size: 3.9063vw;
+ overflow: hidden; flex: 1;  }
    .text {width: 100%; height: 100%;}
    .skew { transform: skewX(-15deg);}
    .text_container {/* height: 100vh; */width: 73vw; display: flex; position: absolute; overflow: hidden; }
@@ -688,18 +687,15 @@ p {    font-size: 1.2rem;  }
   /* Stage for world */
   #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
   #stageforworld h3 { 
-    /* letter-spacing: -2px; */
-     line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
-  overflow: hidden; flex: 1;  }
-  /* #stageforworld h3 {letter-spacing: -2px;line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
-  overflow: hidden; flex: 1;} */
+    line-height: 4.6875vw; width: 73vw; text-align: left; padding: 50px 0 0 30px;font-size: 3.9063vw;
+ overflow: hidden; flex: 1;  }
   .text {width: 100%; height: 100%;}
   .skew { transform: skewX(-15deg);}
   .text_container {/* height: 100vh; */width: 73vw; display: flex; position: absolute; overflow: hidden; }
   .text_container:first-child { opacity: 0.2;}
   #black {  width: 00%;  animation: 8s ease-in-out; overflow: hidden; transform: skewX(15deg);}
   #blackb {clip-path: polygon(0 60%, 0% 100%, 10% 100%);}
-
+  
   #stageforworld .img:hover img { transform: scale(1.2);}
   .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
@@ -859,8 +855,7 @@ p {    font-size: 1.2rem;  }
   /* Stage for world */
   #stageforworld { width: 100%; height: 1300px; position: relative; overflow: hidden; }
   #stageforworld h3 { 
-    /* letter-spacing: -2px; */
-     line-height: 6rem; width: 73vw; text-align: left; padding: 50px 0 0 30px;
+     line-height: 4.6875vw; width: 73vw; text-align: left; padding: 50px 0 0 30px;font-size: 3.9063vw;
   overflow: hidden; flex: 1;  }
 
   .text { width: 100%; height: 100%; }
