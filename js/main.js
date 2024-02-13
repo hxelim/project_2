@@ -8,10 +8,7 @@ $(function () {
   $(window).resize(function () {
     updateSlideTextHeight();
   });
-})
 
-
-$(function () {
   // 수상내역 마우스 호버시 포스터 바뀜
   $('.list').mouseenter(function () {
     let idx = $(this).index()
@@ -21,7 +18,6 @@ $(function () {
 
     $('.rightbox img').hide();
     $('.rightbox img').eq(idx).stop().fadeIn('fast');
-
   });
 
 
@@ -30,20 +26,22 @@ $(function () {
     $('.imgboxBG').addClass('activegray');
     $('.imgboxBG').fadeTo('50ms', 0.3);
   })
+
   $('#photoslide button').mouseout(function () {
     $('.imgboxBG').removeClass('activegray');
     $('.imgboxBG').fadeTo("50ms", 1);
-
   })
-
 })
 
 
 
-
+function detectMediaSize() {
 // 미디어 쿼리
 if (window.matchMedia("(min-width:1457px)").matches) {
+  console.log('pc')
   // 뷰포트 너비가 1457 픽셀 이상
+  $(".part1 .box").css("transform", "translateY(0px)").css("opacity", "1");
+
 
   $(window).scroll(function () {
     // 스크롤 내리면 article 아래에서 등장
@@ -62,11 +60,9 @@ if (window.matchMedia("(min-width:1457px)").matches) {
 
 
     // 스크롤 내려가면 part2 나타나는 효과
-    var ws = $(this).scrollTop();
     var p2 = $(".part2").offset().top;
     var p2video = $(".part2 #videobox").offset().top;
     var p2photo = $(".part2 #photoslide").offset().top;
-    var windowWidth = $(window).width();
 
     if (ws > p2 - 100) {
       $('.bg2023').css("transform", "translateY(0px)");
@@ -74,7 +70,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
       $('.back_small').css("transform", "translateY(10px)");
     }
 
-    if (ws > p2video - 200) {
+    if (ws > p2 - 100) {
       $("#videobox .video").width("90%");
       $("#videobox p").width("90%");
       $("#videobox .container").width("1440px");
@@ -118,15 +114,12 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     if (ws > p2photo - 100) {
       $('#photoslide .ps6').css("transform", "translateY(0px)").css("opacity", "1");
     }
-  });
 
 
 
 
 
   // 스크롤 내려가면 part3 나타나는 효과
-  $(window).scroll(function () {
-    var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
 
     if (ws > p3 - 600) {
@@ -155,6 +148,11 @@ if (window.matchMedia("(min-width:1457px)").matches) {
 
 } else if (window.matchMedia("(min-width:1267px) and (max-width:1456px)").matches) {
   // 뷰포트 너비가 1267픽셀~ 1456픽셀
+  console.log('pcmedium')
+
+  $(".part1 .box:lt(3)").css("transform", "translateY(0px)").css("opacity", "1");
+  $('.part1 .box').slice(3).css("transform", "translateY(0px)").css("opacity", "1");
+
 
   $(window).scroll(function () {
     // 스크롤 내리면 article 아래에서 등장
@@ -172,9 +170,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     }
 
     // 스크롤 내려가면 part2 나타나는 효과
-    var ws = $(this).scrollTop();
     var p2 = $(".part2").offset().top;
-    var windowWidth = $(window).width();
 
     if (ws > p2 - 100) {
       $('.bg2023').css("transform", "translateY(0px)");
@@ -183,21 +179,17 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     }
 
     if (ws > p2 + 900) {
-
       $('#photoslide .imgboxBG').children().css("transform", "translateY(0px)").css("opacity", "1");
     }
 
     if (ws > p2 + 1400) {
       $('#photoslide .textbox').css("transform", "translateY(0px)").css("opacity", "1");
     }
-  });
 
 
 
 
   // 스크롤 내려가면 part3 나타나는 효과
-  $(window).scroll(function () {
-    var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
 
     if (ws > p3 - 700) {
@@ -221,7 +213,9 @@ if (window.matchMedia("(min-width:1457px)").matches) {
   })
 
 } else if (window.matchMedia("(min-width:1100px) and (max-width:1266px)").matches) {
+  console.log('pcsmall')
   // 뷰포트 너비가 1100픽셀~ 1266픽셀
+
 
   $(window).scroll(function () {
     // 스크롤 내리면 article 아래에서 등장
@@ -244,9 +238,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     }
 
     // 스크롤 내려가면 part2 나타나는 효과
-    var ws = $(this).scrollTop();
     var p2 = $(".part2").offset().top;
-    var windowWidth = $(window).width();
 
     if (ws > p2 - 100) {
       $('.bg2023').css("transform", "translateY(0px)");
@@ -262,14 +254,8 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     if (ws > p2 + 1400) {
       $('#photoslide .textbox').css("transform", "translateY(0px)").css("opacity", "1");
     }
-  });
-
-
-
 
   // 스크롤 내려가면 part3 나타나는 효과
-  $(window).scroll(function () {
-    var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
 
     if (ws > p3 - 700) {
@@ -278,7 +264,6 @@ if (window.matchMedia("(min-width:1457px)").matches) {
       $('#french .box').eq(2).delay(500).animate({ top: -100, opacity: 1 }, 500);
       $('#french .box').eq(3).delay(800).animate({ top: -100, opacity: 1 }, 500);
     }
-
 
     //스크롤 내려갈 때 텍스트 색상 회색>검정색 
     if (ws > p3-100) {
@@ -292,8 +277,12 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     }
   })
 
-} else if (window.matchMedia("(min-width:768px) and (max-width:1099px)").matches) { 
+
+
+} else if (window.matchMedia("(min-width:768px) and (max-width:1099px)").matches) {
+  console.log('tablet') 
   // 뷰포트 너비가 768픽셀~ 1099픽셀
+
 
   $(window).scroll(function () {
     // 스크롤 내리면 article 아래에서 등장
@@ -302,7 +291,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
 
     $(".part1 .box").css("transform", "translateY(100px)").css("opacity", "0");
 
-    if (ws > p1 - 850) {
+    if (ws > p1 - 650) {
       $(".part1 .box:lt(2)").css("transform", "translateY(0px)").css("opacity", "1");
     }
 
@@ -316,9 +305,7 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     }
 
     // 스크롤 내려가면 part2 나타나는 효과
-    var ws = $(this).scrollTop();
     var p2 = $(".part2").offset().top;
-    var windowWidth = $(window).width();
 
     if (ws > p2 - 100) {
       $('.bg2023').css("transform", "translateY(0px)");
@@ -334,14 +321,8 @@ if (window.matchMedia("(min-width:1457px)").matches) {
     if (ws > p2 + 1300) {
       $('#photoslide .textbox').css("transform", "translateY(0px)").css("opacity", "1");
     }
-  });
-
-
-
 
   // 스크롤 내려가면 part3 나타나는 효과
-  $(window).scroll(function () {
-    var ws = $(this).scrollTop();
     var p3 = $(".part3").offset().top;
 
     if (ws > p3 - 700) {
@@ -353,6 +334,16 @@ if (window.matchMedia("(min-width:1457px)").matches) {
   })
 
 } else {
-  
- }
+  console.log('mobile')
   // 뷰포트 너비가 ~ 767픽셀
+ }
+}
+
+window.onresize = () => {
+  location.reload();
+}
+
+detectMediaSize();
+
+// window.addEventListener('reize', detectMediaSize, false);
+

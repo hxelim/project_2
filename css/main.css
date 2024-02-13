@@ -53,35 +53,24 @@ p {    font-size: 1.2rem;  }
 
   /* 섹션 2 */
   /* back2023 */
-  .part2 { width: 100%; /* height: 4700px; */ /* height: 300vw; */ background-color: var(--black); display: flex;
-  flex-direction: column; /* justify-content: space-around; */}
+  .part2 { width: 100%; background-color: var(--black); display: flex; flex-direction: column; }
 
   #festival { width: 100%; /* height: 850px; */ overflow: hidden; /* margin-top: 2.7788vw; */}
 
   #festival .container { position: relative;}
 
-  .year { display: flex; justify-content: center; letter-spacing: -50px; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
+  .year { display: flex; justify-content: center; letter-spacing: -2vw; /* transform: translateY(100px); */  padding: 17.36vw 0 10.41vw 0; }
 
-  .bg2023 { /* font-size: 45rem; */font-size: 46vw; line-height: 46vw; color: var(--maincolor);
+  .bg2023 { font-size: 46vw; line-height: 46vw; color: var(--maincolor);
   }
-/* 
-  .bg2023:nth-of-type(1) {transform: translateY(-50px);}
-  .bg2023:nth-of-type(2) {transform: translateY(-150px);}
-  .bg2023:nth-of-type(3) { transform: translateY(130px);}
-  .bg2023:nth-of-type(4) { transform: translateY(40px);} */
+
+  .back2023 { color: var(--white); width: 100%; display: flex; justify-content: center;  align-items: center; position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
 
 
-
-  .back2023 { color: var(--white); width: 100%; /* height: 100%; */  display: flex; justify-content: center;  align-items: center; /* margin: 100px; */ position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);  }
-
-  /* .back2023 .back_big:first-of-type {transform: translate(-50px, -80px); transition: all 2s;margin: 0 30px;}
-
-  .back2023 .back_big:last-of-type {transform: translate(50px, 80px);  margin: 0 30px;transition: all 2s;} */
-
-  .back_big { font-size: 2rem; }
+  .back_big { font-size: 2rem; margin: 0 0.7vw 0;}
 
   .back_small { font-size: 2rem; 
-    margin: 0 30px;
+    margin: 0 3vw; position: absolute; top: -100%;
   }
 
 
@@ -132,19 +121,14 @@ p {    font-size: 1.2rem;  }
 
 
 
-  /* .rightbox>.imgbox img { width: 100%; height: 100%; object-fit: fill;}
-  .rightbox>.imgbox img:not(:first-of-type) {display: none;} */
+
   .awardslist {position: relative;border-bottom: 1px solid white; width: 70%; margin-left: 15px;}
   .leftbox:not(.awardslist:first) {margin-top: 10px;}
   .awardslist p {margin: 20px 0 10px 0; position: absolute; bottom: 0;}
   .awardslist h6 { font-size: 1.8rem; font-family: 'Raleway', sans-serif; font-style: italic;}
-  /* .awardslist p { text-align: right;} */
   #awards h3 { line-height: 4rem; margin-bottom: 50px; width: 100%;}
   .active {color: var(--maincolor); transition: 0.3s; border-bottom: 1px solid var(--maincolor);}
   .ac_awardname {transform: translate(-100px);}
-  /* .rightbox {width: 40%;height: 100%; height: calc(100% - 4rem - 110px);
-  }
-  .rightbox>.imgbox {width: 100%; position: sticky; top: 0;} */
 
 
 
@@ -159,7 +143,7 @@ p {    font-size: 1.2rem;  }
 #french h4 { line-height: 3.5rem; }
 #french hr { width: 100%; border: 1px solid var(--black); margin: 20px 0; }
 #french .imgbox { display: flex; justify-content: space-between; flex-wrap: wrap; }
-#french .box { overflow: hidden; width: 48%; height: auto; position: relative; margin: 1%;}
+#french .box { overflow: hidden; width: 48%; height: auto; position: relative; margin: 1%; }
 #french img:hover { transform: scale(1.25); transition: all 0.3s ease-in-out; }
 
 
@@ -177,9 +161,11 @@ p {    font-size: 1.2rem;  }
   #stageforworld .img:hover img { transform: scale(1.2);}
   .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
-  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
-  #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
-  margin: 10px; position: absolute; bottom: 0; z-index: 5;}
+  /* #stageforworld .img:hover {filter: grayscale(.2)} */
+  #stageforworld .img:hover::after {content: ""; background-color: #333; position: absolute; top: 0 ;left: 0; width: 100%; height: 100%; opacity: 0.5;}
+  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; vertical-align: bottom;;}
+  #stageforworld h5 { font-size: 1.2rem; border-radius: 0 0px 0 0; position: absolute; top: 50%; transform: translate(0,-50%); z-index: 5; width: 100%; display: none; color: white;}
+  #stageforworld .img:hover h5 {display: block;}
 
 
 
@@ -359,7 +345,7 @@ p {    font-size: 1.2rem;  }
   #stageforworld .img:hover img { transform: scale(1.2);}
   .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
-  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; vertical-align: bottom;}
   #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
   margin: 10px; position: absolute; bottom: 0; z-index: 5;}
 
@@ -530,7 +516,7 @@ p {    font-size: 1.2rem;  }
    #stageforworld .img:hover img { transform: scale(1.2);}
    .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
    #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
-   #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+   #stageforworld .img img { width: 100.1%; transition: all 0.3s ease-in-out; vertical-align: bottom;}
    #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
    margin: 10px; position: absolute; bottom: 0; z-index: 5;}
 
@@ -699,7 +685,7 @@ p {    font-size: 1.2rem;  }
   #stageforworld .img:hover img { transform: scale(1.2);}
   .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
-  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; }
+  #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; vertical-align: bottom;}
   #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
   margin: 10px; position: absolute; bottom: 0; z-index: 5;}
 
