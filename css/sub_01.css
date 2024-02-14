@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@600&family=Noto+Serif+Bengali:wght@800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: var(--black)}
+ul,  li,  ol {list-style: none;}
+button {border: none;}
+h1, h2, h4, h5, p, ul, a, button {font-family: 'Raleway', sans-serif;}
+h3, h6, span {font-family: 'Playfair Display', serif;}
+.bg2023 {font-family: 'Noto Serif Bengali', serif;}
+
+
+
+  
+/* 공통 */
+body {
+  background-color: #F1EEE9;
+}
+
+:root {
+  --maincolor: #C6A26E;
+  --white: #fff;
+  --black: #222;
+}
+
+@media (max-width:767px) {
+  /* 미디어쿼리(mobile) ~767px */
+
+  h2 {    font-size: 8.5rem;  }
+  h3 {    font-size: 4rem;  }
+  h4 {    font-size: 3rem;  }
+  h5 {    font-size: 2.2rem;  }
+  h6 {    font-size: 1.9rem;  }
+  p {    font-size: 1.2rem;  }
+  
+    html {font-size: 10px;}
+    
+    /* section {width: 100%;} */
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+.deco .big {width: 100%; height: 50%; overflow: hidden;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+.newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
+.news {width: 100%; height: 100%;}
+.news > .box {width: 100%;  display: flex; flex-wrap: wrap;} 
+.news>.box>.img {width: 100%; height: 41.1805vw;  background-size: cover; background-repeat: no-repeat;}
+.news>.box>.text {width: 100%; height: 100%; padding:4.5455vw; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
+.news>.box>.text>h4 {line-height: 2.5rem; font-size: 2.5rem;}
+.news>.box>.text>p {overflow: hidden ; -webkit-line-clamp: 7; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box;}
+
+.smallWrap {width: 100%; height: 43.1215vw; margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;}
+.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+  border-radius: 50px; transition: 0.5s;  position: relative; 
+  margin: 0 6.8634vw;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
+.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
+.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
+.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
+.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+.active {width: 9.0909vw; height: 9.0909vw ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+}
+
+
+@media (min-width:768px) and (max-width: 1099px){   
+  /* 미디어쿼리(tablet) 768px~1099px */
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
+  html {font-size: 12px;}
+
+
+/* section {width: 100%;} */
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+.deco .big {width: 100%; height: 50%; overflow: hidden;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+.newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
+.news {width: 100%; height: 100%;}
+.news > .box {width: 100%; height: 41.1805vw; display: flex;}
+.news>.box>.img {width: 65%; height: 100%; background-size: cover; background-repeat: no-repeat;}
+.news>.box>.text {width: 35%; height: 100%; padding:4.5455vw; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
+.news>.box>.text>h4 {line-height: 2.5rem; font-size: 2.5rem;}
+.news>.box>.text>p {overflow: hidden ; -webkit-line-clamp: 7; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box;}
+
+.smallWrap {width: 100%; height: 43.1215vw; margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;}
+.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+  border-radius: 50px; transition: 0.5s;  position: relative; 
+  margin: 0 6.8634vw;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
+.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
+.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
+.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
+.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+.active {width: 9.0909vw; height: 9.0909vw ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+}
+
+
+@media  (min-width: 1100px) and (max-width:1266px){
+/* 미디어쿼리(PCsmall) 1100px~1266px */
+
+
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
+  html {font-size: 12px;}
+  
+/* section {width: 100%;} */
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+.deco .big {width: 100%; height: 50%; overflow: hidden;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+.newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
+.news {width: 100%; height: 100%;}
+.news > .box {width: 100%; height: 41.1805vw; display: flex;}
+.news>.box>.img {width: 65%; height: 100%; background-size: cover; background-repeat: no-repeat;}
+.news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.news>.box>.text>h4 {line-height: 3.5rem; font-size: 3.5rem;}
+
+/* .smallWrap {width: 100%; height: 34.3171vw; margin-bottom: 6.8634vw; ;} */
+.smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
+/* .smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;} */
+.smallWrap .small {width: 300%; height: 100%; display: block;}
+.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+  border-radius: 50px; transition: 0.5s;  position: relative; 
+  margin: 0 6.8634vw;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
+.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
+.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
+.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
+.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+
+.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+}
+
+@media (min-width: 1267px ) and (max-width: 1456px){
+/* 미디어쿼리(PCmedium) 1267px~1456px */
+
+  
+  h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
+  html {font-size: 12px;}
+
+/* section {width: 100%;} */
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+.deco .big {width: 100%; height: 50%; overflow: hidden;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+.newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
+.news {width: 100%; height: 100%;}
+.news > .box {width: 100%; height: 41.1805vw; display: flex;}
+.news>.box>.img {width: 65%; height: 100%; background-size: cover; background-repeat: no-repeat;}
+.news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.news>.box>.text>h4 {line-height: 3.5rem;}
+
+.smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
+/* .smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;} */
+.smallWrap .small {width: 300%; height: 100%; display: block;}
+.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+  border-radius: 50px; transition: 0.5s;  position: relative; 
+  margin: 0 6.8634vw;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
+.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
+.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
+.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
+.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+
+
+.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+}
+
+
+@media (min-width: 1457px) {
+/* 미디어쿼리(PC) 1457px ~ */
+
+h1 {    font-size: 10rem;  }
+h2 {    font-size: 8.5rem;  }
+h3 {    font-size: 5rem;  }
+h4 {    font-size: 4rem;  }
+h5 {    font-size: 3rem;  }
+h6 {    font-size: 2.5rem;  }
+p {    font-size: 1.2rem;  }
+
+html { font-size: 15px;}
+
+/* section {width: 100%;} */
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+.deco .big {width: 100%; height: 50%; overflow: hidden;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+.newsWrap {width: 100%; background-color: gold; margin: 100px 0;}
+.news {width: 100%; height: 100%;}
+.news > .box {width: 100%; height: 600px; display: flex;}
+.news>.box>.img {width: 65%; height: 100%; background-size: cover; background-repeat: no-repeat;}
+.news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.news>.box>.text>h4 {line-height: 4rem;}
+
+.smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;}
+.smallWrap .small li {width: 600px; height: 100%; background-color: gray; float: left; 
+  border-radius: 50px; transition: 0.5s;  position: relative; 
+  margin: 0 100px;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 30px 50px; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
+.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
+.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
+.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
+.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+
+.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s; opacity: 0;}
+.active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+}
