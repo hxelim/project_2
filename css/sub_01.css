@@ -24,6 +24,28 @@ body {
   --black: #222;
 }
 
+/* .news .box .text h4::first-letter {color: red; font-size: 5rem;} */
+.news > .box {position: sticky; top: 0; background-color:#E5D9C7;}
+.smallWrap .small li .img:before {content: ""; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,0,0,0) 5%,red ); opacity: 0; position: absolute; top: 0; left: 0; transition: 0.5s;}
+.smallWrap .small li .img:hover:before {opacity: 0.6;}
+
+.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw; position: relative; width: 100%;}
+.deco .big {width: 450%; height: 50%; overflow: hidden; position: absolute; text-align: center; transform: translateX(100%);font-size: 4.4612vw;  }
+.deco .big:nth-child(1) {animation: scroll-left 60s linear infinite;}
+.deco .big:nth-child(2) {bottom: 0; animation: scroll-right 60s linear infinite;}
+@keyframes scroll-left {
+  0% {transform: translateX(-2%);}
+  100% {transform: translateX(-72%);}
+}
+@keyframes scroll-right {
+  0% {transform: translateX(-72%);}
+  100% {transform: translateX(2%);}
+}
+
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+
+
 @media (max-width:767px) {
   /* 미디어쿼리(mobile) ~767px */
 
@@ -36,11 +58,13 @@ body {
   
     html {font-size: 10px;}
     
+
+
     /* section {width: 100%;} */
-.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+/* .deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
 .deco .big {width: 100%; height: 50%; overflow: hidden;}
 .deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
-.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;} */
 
 .newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
 .news {width: 100%; height: 100%;}
@@ -50,20 +74,28 @@ body {
 .news>.box>.text>h4 {line-height: 2.5rem; font-size: 2.5rem;}
 .news>.box>.text>p {overflow: hidden ; -webkit-line-clamp: 7; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box;}
 
-.smallWrap {width: 100%; height: 43.1215vw; margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
-.smallWrap .small {width: 300%; height: 100%; display: block;}
-.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+.smallWrap {width: 100%;
+   /* height: 43.1215vw;  */
+   margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
+.smallWrap .small {width: 100%; height: 100%; display: flex; flex-direction: column;}
+.smallWrap .small li {
+  width: 80%; 
+  height: 300px; background-color: gray; 
+  /* float: left;  */
   border-radius: 50px; transition: 0.5s;  position: relative; 
-  margin: 0 6.8634vw;}
-.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
-.smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
-.smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
-.smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
-.smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
-.smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
-.active {width: 9.0909vw; height: 9.0909vw ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
-.active span {font-size: 5rem; position: absolute; font-size: 300;}
-.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
+  margin: 6.8634vw 0;}
+
+
+.smallWrap .small li:nth-child(2n-1) {align-self: flex-end;}
+
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative; overflow: hidden;}
+.smallWrap .small li .underline {position: absolute; display: none;}
+
+.active {
+  display: none;
+  }
+/* .active span {font-size: 5rem; position: absolute; font-size: 300;}
+.active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;} */
 }
 
 
@@ -81,10 +113,10 @@ p {    font-size: 1.2rem;  }
 
 
 /* section {width: 100%;} */
-.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+/* .deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
 .deco .big {width: 100%; height: 50%; overflow: hidden;}
 .deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
-.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;} */
 
 .newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
 .news {width: 100%; height: 100%;}
@@ -94,18 +126,24 @@ p {    font-size: 1.2rem;  }
 .news>.box>.text>h4 {line-height: 2.5rem; font-size: 2.5rem;}
 .news>.box>.text>p {overflow: hidden ; -webkit-line-clamp: 7; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box;}
 
-.smallWrap {width: 100%; height: 43.1215vw; margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
-.smallWrap .small {width: 300%; height: 100%; display: block;}
-.smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
+/* .smallWrap {width: 100%; height: 43.1215vw; margin-bottom: 6.8634vw; padding-bottom: 8.8044vw; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;} */
+
+/* .smallWrap {width: 100%; height: 243.0556vw; margin-bottom: 6.9444vw; padding-bottom: 4.8611vw; margin-top: 13.8889vw;}
+.smallWrap .small {width: 300%; position: sticky; top: 150px;  height: 35.1215vw; display: block; padding:0 calc(50% - 400px) 0 20%;} */
+
+.smallWrap {width: 100%; height: 291.0556vw; margin-bottom: 6.9444vw; padding-bottom: 4.8611vw; margin-top: 13.8889vw;}
+.smallWrap .small {width: 350%; position: sticky; top: 30%;  height: 43.1215vw; display: block; padding:0 31% 0 25%;}
+.smallWrap .small li {width: 48.1805vw; height: 100%; background-color: gray; float: left; 
   border-radius: 50px; transition: 0.5s;  position: relative; 
   margin: 0 6.8634vw;}
-.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;  overflow: hidden;}
 .smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
 .smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
 .smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
 .smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
 .smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
-.active {width: 9.0909vw; height: 9.0909vw ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active {width: 9.0909vw; height: 9.0909vw ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;opacity: 0;}
 .active span {font-size: 5rem; position: absolute; font-size: 300;}
 .active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
 }
@@ -124,11 +162,13 @@ p {    font-size: 1.2rem;  }
 
   html {font-size: 12px;}
   
+
+
 /* section {width: 100%;} */
-.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+/* .deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
 .deco .big {width: 100%; height: 50%; overflow: hidden;}
 .deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
-.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;} */
 
 .newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
 .news {width: 100%; height: 100%;}
@@ -137,21 +177,23 @@ p {    font-size: 1.2rem;  }
 .news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
 .news>.box>.text>h4 {line-height: 3.5rem; font-size: 3.5rem;}
 
-/* .smallWrap {width: 100%; height: 34.3171vw; margin-bottom: 6.8634vw; ;} */
-.smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
-/* .smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;} */
-.smallWrap .small {width: 300%; height: 100%; display: block;}
+/* .smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;} */
+
+.smallWrap {width: 100%; height: 243.0556vw; margin-bottom: 6.9444vw; padding-bottom: 4.8611vw; margin-top: 13.8889vw;}
+.smallWrap .small {width: 300%; position: sticky; top: 150px;  height: 40.1215vw; display: block; padding:0 calc(50% - 400px) 0 20%;}
+
 .smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
   border-radius: 50px; transition: 0.5s;  position: relative; 
   margin: 0 6.8634vw;}
-.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;  overflow: hidden;}
 .smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
 .smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
 .smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
 .smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
 .smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
 
-.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;opacity: 0;}
 .active span {font-size: 5rem; position: absolute; font-size: 300;}
 .active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
 }
@@ -169,11 +211,13 @@ p {    font-size: 1.2rem;  }
 
   html {font-size: 12px;}
 
+
+
 /* section {width: 100%;} */
-.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
+/* .deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
 .deco .big {width: 100%; height: 50%; overflow: hidden;}
 .deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
-.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;} */
 
 .newsWrap {width: 100%; background-color: gold; margin: 6.8634vw 0;}
 .news {width: 100%; height: 100%;}
@@ -182,13 +226,15 @@ p {    font-size: 1.2rem;  }
 .news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
 .news>.box>.text>h4 {line-height: 3.5rem;}
 
-.smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
-/* .smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;} */
-.smallWrap .small {width: 300%; height: 100%; display: block;}
+/* .smallWrap {width: 100%; height: 40.1215vw; margin-bottom: 6.8634vw; padding-bottom: 5.8044vw; overflow: hidden;}
+.smallWrap .small {width: 300%; height: 100%; display: block;} */
+
+.smallWrap {width: 100%; height: 243.0556vw; margin-bottom: 6.9444vw; padding-bottom: 4.8611vw; margin-top: 13.8889vw;}
+.smallWrap .small {width: 300%; position: sticky; top: 150px; height: 40.1215vw; display: block; padding:0 calc(50% - 400px) 0 20%;}
 .smallWrap .small li {width: 41.1805vw; height: 100%; background-color: gray; float: left; 
   border-radius: 50px; transition: 0.5s;  position: relative; 
   margin: 0 6.8634vw;}
-.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 2.0590vw 3.4317vw; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;  overflow: hidden;}
 .smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
 .smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
 .smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
@@ -196,7 +242,7 @@ p {    font-size: 1.2rem;  }
 .smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
 
 
-.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s;}
+.active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s; opacity: 0;}
 .active span {font-size: 5rem; position: absolute; font-size: 300;}
 .active > p {font-size: 0.8rem; text-decoration: underline; position: absolute; bottom: 20%;}
 }
@@ -215,30 +261,46 @@ p {    font-size: 1.2rem;  }
 
 html { font-size: 15px;}
 
-/* section {width: 100%;} */
-.deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; word-break: break-all; font-size: 4.4612vw; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw;}
-.deco .big {width: 100%; height: 50%; overflow: hidden;}
-.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
-.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;}
+/* .deco {overflow: hidden; font-family: 'Noto Serif Bengali', serif; font-family: 'Noto Serif Bengali', serif; height: 13.7268vw; position: relative; width: 100%;}
+.deco .big {width: 450%; height: 50%; overflow: hidden; position: absolute; text-align: center; transform: translateX(100%);font-size: 4.4612vw;  }
+.deco .big:nth-child(1) {animation: scroll-left 60s linear infinite;}
+.deco .big:nth-child(2) {bottom: 0; animation: scroll-right 60s linear infinite;}
+@keyframes scroll-left {
+  0% {transform: translateX(-2%);}
+  100% {transform: translateX(-72%);}
+}
+@keyframes scroll-right {
+  0% {transform: translateX(-72%);}
+  100% {transform: translateX(2%);}
+}
 
-.newsWrap {width: 100%; background-color: gold; margin: 100px 0;}
+.deco .big li, span {display: inline; font-family: 'Noto Serif Bengali', serif;}
+.deco span {color: rgba(0, 0, 0, 0); -webkit-text-stroke: 2px black;} */
+
+.newsWrap {width: 100%; margin: 100px 0;}
 .news {width: 100%; height: 100%;}
 .news > .box {width: 100%; height: 600px; display: flex;}
 .news>.box>.img {width: 65%; height: 100%; background-size: cover; background-repeat: no-repeat;}
 .news>.box>.text {width: 35%; height: 100%; padding: 50px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
 .news>.box>.text>h4 {line-height: 4rem;}
 
-.smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;}
-.smallWrap .small {width: 300%; height: 100%; display: block;}
+/* .smallWrap {width: 100%; height: 570px; margin-bottom: 100px; padding-bottom: 70px; overflow: hidden;} */
+/* .smallWrap .small {width: 300%; height: 100%; display: block;} */
+.smallWrap {width: 100%; height: 3500px; margin-bottom: 100px; padding-bottom: 70px; margin-top: 200px;}
+.smallWrap .small {width: 300%; position: sticky; top: 150px; height: 570px; display: block; padding:0 calc(50% - 400px) 0 calc(50% - 250px);}
 .smallWrap .small li {width: 600px; height: 100%; background-color: gray; float: left; 
-  border-radius: 50px; transition: 0.5s;  position: relative; 
+  border-radius: 50px; transition: 0.5s;  
+  position: relative; 
   margin: 0 100px;}
-.smallWrap .small li .img {width: 100%; height: 100%; padding: 30px 50px; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;}
+.smallWrap .small li .img {width: 100%; height: 100%; padding: 30px 50px; background-size: cover; background-position: center; border-radius: 50px; transition: 0.5s; color: white; position: relative;  overflow: hidden;}
 .smallWrap .small li .underline {position: absolute; transform: rotatez(90deg); }
 .smallWrap .small li .side1 {top: 1.33333rem; left: -2.8rem;}
 .smallWrap .small li .side2 {top: 3.26666rem; left: -4.6666rem;} 
 .smallWrap .small li .side3 {top: 2.6666rem; left: -4.06666rem;} 
 .smallWrap .small li .side4 {top: 2.2rem; left: -3.6rem;} 
+
+
+
 
 .active {width: 100px; height: 100px ;background-color:lightgray; position: absolute; bottom: -50px; right: 15%; border-radius: 50%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; transition: 0.3s; opacity: 0;}
 .active span {font-size: 5rem; position: absolute; font-size: 300;}

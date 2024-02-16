@@ -54,8 +54,13 @@ $(function () {
 
   // 초기화 및 리사이즈 이벤트 핸들러 등록
   handleViewportSize();
-  $(window).resize(handleViewportSize);
-
+  $(window).resize(handleViewportSize());
+  // $(window).resize(function(){
+  
+  //   location.reload();
+  
+  // });
+  
   // 메뉴 배경 높이 업데이트 함수
   function updateMenuBgHeight() {
     let maxHeight = 0;
@@ -65,3 +70,4 @@ $(function () {
     $('#menuBg').css({ height: maxHeight });
   }
 });
+

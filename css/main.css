@@ -149,7 +149,7 @@ p {    font-size: 1.2rem;  }
 
 
   /* Stage for world */
-  #stageforworld { width: 100%; position: relative; overflow: hidden;}
+  #stageforworld { width: 100%; position: relative; overflow: hidden; margin-bottom: 100px;}
   #stageforworld h3 { font-size: 2.5rem;
       text-align: center; 
       padding: 50px 50px 0 50px;
@@ -333,7 +333,7 @@ p {    font-size: 1.2rem;  }
 
 
   /* Stage for world */
-  #stageforworld { width: 100%; position: relative; overflow: hidden;}
+  #stageforworld { width: 100%; position: relative; overflow: hidden; margin-bottom: 100px; }
   #stageforworld h3 { font-size: 3.5rem;
       text-align: center; 
       padding: 50px 50px 0 50px;
@@ -502,7 +502,7 @@ p {    font-size: 1.2rem;  }
  
  
    /* Stage for world */
-   #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
+   #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;margin-bottom: 100px; }
    #stageforworld h3 { 
     line-height: 4.6875vw; width: 73vw; text-align: left; padding: 50px 0 0 30px;font-size: 3.9063vw;
  overflow: hidden; flex: 1;  }
@@ -514,7 +514,7 @@ p {    font-size: 1.2rem;  }
    #blackb {clip-path: polygon(0 60%, 0% 100%, 10% 100%);}
  
    #stageforworld .img:hover img { transform: scale(1.2);}
-   .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
+   .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
    #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
    #stageforworld .img img { width: 100.1%; transition: all 0.3s ease-in-out; vertical-align: bottom;}
    #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;
@@ -671,7 +671,7 @@ p {    font-size: 1.2rem;  }
 
 
   /* Stage for world */
-  #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden;}
+  #stageforworld { width: 100%; /* height: 1300px; */ position: relative; overflow: hidden; margin-bottom: 100px; }
   #stageforworld h3 { 
     line-height: 4.6875vw; width: 73vw; text-align: left; padding: 50px 0 0 30px;font-size: 3.9063vw;
  overflow: hidden; flex: 1;  }
@@ -683,7 +683,7 @@ p {    font-size: 1.2rem;  }
   #blackb {clip-path: polygon(0 60%, 0% 100%, 10% 100%);}
   
   #stageforworld .img:hover img { transform: scale(1.2);}
-  .stageimgbox { display: flex; justify-content: space-between; margin-top: 50px; }
+  .stageimgbox { display: flex; justify-content: space-between; margin-top: 100px; }
   #stageforworld .img { width: 33%; text-align: center; overflow: hidden; position: relative;}
   #stageforworld .img img { width: 100%; transition: all 0.3s ease-in-out; vertical-align: bottom;}
   #stageforworld h5 { font-size: 1.5rem; background-color: rgb(255, 255, 255, 0.6);border-radius: 0 0px 0 0;

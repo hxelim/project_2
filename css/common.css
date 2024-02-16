@@ -26,7 +26,7 @@
   header .top_logo {height: 100%;}
   header .nav_icon>.top_logo>a>img {width: 100%; height: 100%; object-fit: contain; transform: scale(0.75); }  
 
-  #menu {width: 1440px; height: 6.6rem;  margin: 0 auto;}
+  #menu {width: 1440px; height: 6.6rem;  margin: 0 auto; }
   #menu>li {float: left; width: 14.285%; text-align: center; line-height: 3rem; height: 100%; display: block;} 
   #menu>li>a {line-height: 6.6rem; font-weight: bold;font-size: 1rem;  display: block; height: 100%;}
   #menu img {width: 100%; height: 100%; object-fit: contain; transform: scale(0.75);}
@@ -49,7 +49,7 @@
 @media  (max-width: 1099px){
   html {font-size: 12px;} /* 폰트 크기 축소 */
   header {position: relative;}
-  #menu {width: 100%; height: auto; 
+  #menu {width: 100%; height: auto; overflow: hidden;
     /* position: absolute;  */
     /* display: none; */
      /* background-color: white; */
@@ -101,7 +101,9 @@
 @media  (max-width: 1099px){
     /* 푸터 */
   /* left box */
-  footer {width: 100%; margin-top: 100px;}
+  footer {width: 100%; 
+    /* margin-top: 100px; */
+  }
 
   footer h5 {font-weight: 300;}
 
@@ -130,7 +132,9 @@
 @media  (min-width: 1100px){
    /* 푸터 */
   /* left box */
-  footer {width: 100%; height: 580px;position:relative;}
+  footer {width: 100%; 
+    height: 470px;
+    position:relative;}
   footer h5 {font-weight: 300;}
   footer span {font-size: 1.6rem; font-family: 'Raleway', sans-serif;}
 
@@ -145,7 +149,7 @@
 
 
   /* right box */
-  .footer_R {width: 50%; height: 80%; background-color: var(--maincolor); position: absolute; bottom: 0;right: 0; padding: 20px; color: var(--black); display: flex; flex-wrap: wrap; padding-left: 50px;}
+  .footer_R {width: 50%; height: 100%; background-color: var(--maincolor); position: absolute; bottom: 0;right: 0; padding: 20px; color: var(--black); display: flex; flex-wrap: wrap; padding-left: 50px;}
 
   .subscribe {width: 100%; display: flex; flex-direction: column; justify-content: space-between;}
 
