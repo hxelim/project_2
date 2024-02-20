@@ -12,6 +12,7 @@ $(function () {
     const mediaQuery = window.matchMedia("(min-width:1100px)");
 
     if (mediaQuery.matches) {
+      console.log('pc')
       // 뷰포트 너비가 1100 픽셀 이상인 경우에 실행할 코드
       $('.sub').hide();
       $('#menu').show();
@@ -33,6 +34,7 @@ $(function () {
         }
       );
     } else {
+      console.log('tablet')
       // 뷰포트 너비가 1100 픽셀 미만인 경우에 실행할 코드
       $('#menu').hide();
       $('#menuBg').hide();
@@ -54,12 +56,8 @@ $(function () {
 
   // 초기화 및 리사이즈 이벤트 핸들러 등록
   handleViewportSize();
-  $(window).resize(handleViewportSize());
-  // $(window).resize(function(){
-  
-  //   location.reload();
-  
-  // });
+  $(window).resize(handleViewportSize);
+
   
   // 메뉴 배경 높이 업데이트 함수
   function updateMenuBgHeight() {

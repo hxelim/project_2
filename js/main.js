@@ -31,11 +31,12 @@ $(function () {
     $('.imgboxBG').removeClass('activegray');
     $('.imgboxBG').fadeTo("50ms", 1);
   })
-})
+
 
 
 
 function detectMediaSize() {
+
 // 미디어 쿼리
 if (window.matchMedia("(min-width:1457px)").matches) {
   console.log('pc')
@@ -337,13 +338,19 @@ if (window.matchMedia("(min-width:1457px)").matches) {
   console.log('mobile')
   // 뷰포트 너비가 ~ 767픽셀
  }
+
 }
 
-window.onresize = () => {
-  location.reload();
-}
+// window.onresize = () => {
+//   clearTimeout(scrollevent)
+//   let scrollevent = setTimeout(() => {
+//     location.reload();
+//   }, 20);
+  
+// }
 
 detectMediaSize();
-
+$(window).resize(detectMediaSize)
 // window.addEventListener('reize', detectMediaSize, false);
 
+})
